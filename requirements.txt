@@ -1,0 +1,22 @@
+# Core dependencies
+requests
+bs4  # BeautifulSoup4
+PyYAML
+setuptools>=65.5.1
+tqdm  
+
+# Browser automation
+playwright
+python-dotenv
+
+# Date handling
+python-dateutil
+
+# HTML/XML parsing
+html5lib
+
+# APIs oficiales (opcional)
+tweepy  # Twitter/X API
+facebook-sdk  # Facebook API
+instaloader  # Instagram
+tiktok-api  # Alternativa para TikTok 
