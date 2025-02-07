@@ -7,6 +7,9 @@ Features
 --------
 - Google Search scraping with customizable parameters
 - Sentiment analysis of search results using TextBlob
+- Dual sentiment analysis options:
+  * TextBlob (default)
+  * VADER (optional enhancement)
 - Platform identification (blogs, news, social media, discussions)
 - Results export in JSON and CSV formats
 - Configurable logging system
@@ -80,3 +83,11 @@ Logging
 - Logs are stored in logs/ directory
 - Debug information available in debug_response.html
 - Failed searches logged in debug_no_results.html
+
+Optional Enhancements
+-------------------
+For enhanced sentiment analysis with VADER:
+```bash
+python -m nltk.downloader vader_lexicon
+```
+If VADER is not available, the system will automatically use TextBlob.

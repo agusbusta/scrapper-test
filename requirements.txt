@@ -22,7 +22,8 @@ instaloader  # Instagram
 tiktok-api  # Alternativa para TikTok 
 
 # Sentiment Analysis
-textblob>=0.17.1 
+textblob>=0.17.1
+nltk>=3.8.1
 
 # Added from the code block
 fake-useragent>=1.4.0 

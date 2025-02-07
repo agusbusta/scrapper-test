@@ -83,3 +83,685 @@
 2025-02-07 16:54:51,823 - scrapers.google_scraper - INFO - Parsing completed. 12 valid results processed
 2025-02-07 16:54:51,823 - scrapers.google_scraper - INFO - Found 12 results
 2025-02-07 16:54:51,824 - __main__ - INFO - Saved 12 results to data/processed
+2025-02-07 17:47:36,855 - __main__ - INFO - Starting Google Search Scraper...
+2025-02-07 17:47:36,856 - utils.initialize_nltk - INFO - NLTK initialization skipped - using TextBlob only
+2025-02-07 17:47:36,856 - __main__ - INFO - Search parameters: keyword='python tutorial', date='02/10/2024'
+2025-02-07 17:47:36,858 - scrapers.google_scraper - INFO - Searching for: python tutorial (date: 02/10/2024)
+2025-02-07 17:47:36,858 - asyncio - DEBUG - Using selector: KqueueSelector
+2025-02-07 17:47:37,589 - utils.request_handler - INFO - Initializing search session...
+2025-02-07 17:47:46,467 - scrapers.google_scraper - DEBUG - Found 103 results in main container
+2025-02-07 17:47:46,534 - scrapers.google_scraper - INFO - Found 79 results on page 1
+2025-02-07 17:47:49,981 - asyncio - DEBUG - Using selector: KqueueSelector
+2025-02-07 17:47:50,359 - utils.request_handler - INFO - Initializing search session...
+2025-02-07 17:47:59,767 - scrapers.google_scraper - DEBUG - Found 95 results in main container
+2025-02-07 17:47:59,838 - scrapers.google_scraper - INFO - Found 15 results on page 2
+2025-02-07 17:48:00,175 - scrapers.google_scraper - INFO - No more pages available
+2025-02-07 17:48:00,175 - scrapers.google_scraper - INFO - Total results found: 94
+2025-02-07 17:48:00,177 - __main__ - INFO - Saved 94 results to data/processed
+2025-02-07 17:49:35,638 - __main__ - INFO - Starting Google Search Scraper...
+2025-02-07 17:49:35,638 - utils.initialize_nltk - INFO - NLTK initialization skipped - using TextBlob only
+2025-02-07 17:49:35,639 - __main__ - INFO - Search parameters: keyword='Lenskart is scamming', date='02/10/2024'
+2025-02-07 17:49:35,641 - __main__ - ERROR - Error during execution: 
+**********************************************************************
+  Resource [93mvader_lexicon[0m not found.
+  Please use the NLTK Downloader to obtain the resource:
+
+  [31m>>> import nltk
+  >>> nltk.download('vader_lexicon')
+  [0m
+  For more information see: https://www.nltk.org/data.html
+
+  Attempted to load [93msentiment/vader_lexicon.zip/vader_lexicon/vader_lexicon.txt[0m
+
+  Searched in:
+    - '/Users/agustinbustamante/nltk_data'
+    - '/Users/agustinbustamante/scrapper-test/venv/nltk_data'
+    - '/Users/agustinbustamante/scrapper-test/venv/share/nltk_data'
+    - '/Users/agustinbustamante/scrapper-test/venv/lib/nltk_data'
+    - '/usr/share/nltk_data'
+    - '/usr/local/share/nltk_data'
+    - '/usr/lib/nltk_data'
+    - '/usr/local/lib/nltk_data'
+    - ''
+**********************************************************************
+Traceback (most recent call last):
+  File "/Users/agustinbustamante/scrapper-test/src/main.py", line 83, in main
+    scraper = GoogleScraper(config_path=args.config)
+  File "/Users/agustinbustamante/scrapper-test/src/scrapers/google_scraper.py", line 15, in __init__
+    self.sentiment_analyzer = SentimentAnalyzer()
+                              ~~~~~~~~~~~~~~~~~^^
+  File "/Users/agustinbustamante/scrapper-test/src/utils/sentiment_analyzer.py", line 12, in __init__
+    self.vader = SentimentIntensityAnalyzer()
+                 ~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/agustinbustamante/scrapper-test/venv/lib/python3.13/site-packages/nltk/sentiment/vader.py", line 340, in __init__
+    self.lexicon_file = nltk.data.load(lexicon_file)
+                        ~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/Users/agustinbustamante/scrapper-test/venv/lib/python3.13/site-packages/nltk/data.py", line 836, in load
+    opened_resource = _open(resource_url)
+  File "/Users/agustinbustamante/scrapper-test/venv/lib/python3.13/site-packages/nltk/data.py", line 962, in _open
+    return find(path_, path + [""]).open()
+           ~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/Users/agustinbustamante/scrapper-test/venv/lib/python3.13/site-packages/nltk/data.py", line 579, in find
+    raise LookupError(resource_not_found)
+LookupError: 
+**********************************************************************
+  Resource [93mvader_lexicon[0m not found.
+  Please use the NLTK Downloader to obtain the resource:
+
+  [31m>>> import nltk
+  >>> nltk.download('vader_lexicon')
+  [0m
+  For more information see: https://www.nltk.org/data.html
+
+  Attempted to load [93msentiment/vader_lexicon.zip/vader_lexicon/vader_lexicon.txt[0m
+
+  Searched in:
+    - '/Users/agustinbustamante/nltk_data'
+    - '/Users/agustinbustamante/scrapper-test/venv/nltk_data'
+    - '/Users/agustinbustamante/scrapper-test/venv/share/nltk_data'
+    - '/Users/agustinbustamante/scrapper-test/venv/lib/nltk_data'
+    - '/usr/share/nltk_data'
+    - '/usr/local/share/nltk_data'
+    - '/usr/lib/nltk_data'
+    - '/usr/local/lib/nltk_data'
+    - ''
+**********************************************************************
+
+2025-02-07 17:50:07,054 - __main__ - INFO - Starting Google Search Scraper...
+2025-02-07 17:54:10,613 - __main__ - INFO - Starting Google Search Scraper...
+2025-02-07 17:54:53,481 - __main__ - INFO - Starting Google Search Scraper...
+2025-02-07 17:54:53,481 - __main__ - INFO - Initializing NLTK...
+2025-02-07 17:55:43,546 - __main__ - INFO - Starting Google Search Scraper...
+2025-02-07 17:55:43,546 - __main__ - INFO - Initializing NLTK...
+2025-02-07 17:55:43,546 - utils.initialize_nltk - INFO - Starting NLTK initialization...
+2025-02-07 17:55:43,546 - utils.initialize_nltk - INFO - NLTK data directory: /Users/agustinbustamante/nltk_data
+2025-02-07 17:55:43,546 - utils.initialize_nltk - ERROR - Error in NLTK initialization: 
+**********************************************************************
+  Resource [93mvader_lexicon[0m not found.
+  Please use the NLTK Downloader to obtain the resource:
+
+  [31m>>> import nltk
+  >>> nltk.download('vader_lexicon')
+  [0m
+  For more information see: https://www.nltk.org/data.html
+
+  Attempted to load [93msentiment/vader_lexicon.zip[0m
+
+  Searched in:
+    - '/Users/agustinbustamante/nltk_data'
+    - '/Users/agustinbustamante/scrapper-test/venv/nltk_data'
+    - '/Users/agustinbustamante/scrapper-test/venv/share/nltk_data'
+    - '/Users/agustinbustamante/scrapper-test/venv/lib/nltk_data'
+    - '/usr/share/nltk_data'
+    - '/usr/local/share/nltk_data'
+    - '/usr/lib/nltk_data'
+    - '/usr/local/lib/nltk_data'
+**********************************************************************
+
+2025-02-07 17:55:43,546 - utils.initialize_nltk - WARNING - Falling back to TextBlob only
+2025-02-07 17:55:43,546 - __main__ - INFO - Processing arguments...
+2025-02-07 17:55:43,547 - __main__ - INFO - Search parameters: keyword='Lenskart is scamming', date='02/10/2024'
+2025-02-07 17:55:43,547 - __main__ - INFO - Initializing scraper...
+2025-02-07 17:55:43,549 - utils.sentiment_analyzer - WARNING - Could not initialize VADER: 
+**********************************************************************
+  Resource [93mvader_lexicon[0m not found.
+  Please use the NLTK Downloader to obtain the resource:
+
+  [31m>>> import nltk
+  >>> nltk.download('vader_lexicon')
+  [0m
+  For more information see: https://www.nltk.org/data.html
+
+  Attempted to load [93msentiment/vader_lexicon.zip/vader_lexicon/vader_lexicon.txt[0m
+
+  Searched in:
+    - '/Users/agustinbustamante/nltk_data'
+    - '/Users/agustinbustamante/scrapper-test/venv/nltk_data'
+    - '/Users/agustinbustamante/scrapper-test/venv/share/nltk_data'
+    - '/Users/agustinbustamante/scrapper-test/venv/lib/nltk_data'
+    - '/usr/share/nltk_data'
+    - '/usr/local/share/nltk_data'
+    - '/usr/lib/nltk_data'
+    - '/usr/local/lib/nltk_data'
+    - ''
+**********************************************************************
+
+2025-02-07 17:55:43,549 - utils.sentiment_analyzer - INFO - Using TextBlob only
+2025-02-07 17:55:43,551 - __main__ - INFO - Starting search...
+2025-02-07 17:55:43,551 - scrapers.google_scraper - INFO - Searching for: Lenskart is scamming (date: 02/10/2024)
+2025-02-07 17:55:43,551 - utils.request_handler - INFO - Starting Playwright for URL: https://www.google.com/search
+2025-02-07 17:55:43,551 - asyncio - DEBUG - Using selector: KqueueSelector
+2025-02-07 17:55:43,880 - utils.request_handler - INFO - Launching browser...
+2025-02-07 17:55:44,100 - utils.request_handler - INFO - Creating browser context...
+2025-02-07 17:55:44,258 - utils.request_handler - INFO - Visiting Google homepage...
+2025-02-07 17:55:45,368 - utils.request_handler - INFO - Waiting for page load...
+2025-02-07 17:55:49,133 - utils.request_handler - INFO - Navigating to search URL: https://www.google.com/search?q=Lenskart is scamming&num=100&start=0&hl=en&gl=us
+2025-02-07 17:55:51,882 - utils.request_handler - INFO - Waiting for search results...
+2025-02-07 17:55:52,542 - utils.request_handler - INFO - Closing browser...
+2025-02-07 17:55:52,696 - scrapers.google_scraper - DEBUG - Found 107 results in main container
+2025-02-07 17:55:52,715 - utils.sentiment_analyzer - INFO - Text too short, attempting to extract full article
+2025-02-07 17:55:52,715 - utils.request_handler - INFO - Starting Playwright for URL: https://www.quora.com/Is-buying-lenses-from-Lenskart-safe
+2025-02-07 17:55:52,715 - asyncio - DEBUG - Using selector: KqueueSelector
+2025-02-07 17:55:52,907 - utils.request_handler - INFO - Launching browser...
+2025-02-07 17:55:52,999 - utils.request_handler - INFO - Creating browser context...
+2025-02-07 17:55:53,069 - utils.request_handler - INFO - Visiting Google homepage...
+2025-02-07 17:55:54,060 - utils.request_handler - INFO - Waiting for page load...
+2025-02-07 17:55:57,738 - utils.request_handler - INFO - Navigating to search URL: https://www.quora.com/Is-buying-lenses-from-Lenskart-safe
+2025-02-07 17:55:58,779 - utils.request_handler - INFO - Waiting for search results...
+2025-02-07 17:56:28,784 - utils.request_handler - INFO - Closing browser...
+2025-02-07 17:56:28,842 - utils.request_handler - ERROR - Request error: Timeout 30000ms exceeded.
+2025-02-07 17:56:28,842 - utils.sentiment_analyzer - INFO - Text too short, attempting to extract full article
+2025-02-07 17:56:28,842 - utils.request_handler - INFO - Starting Playwright for URL: https://www.lenskart.com/refund-exchange#:~:text=You%20will%20get%20a%20refund,case%20of%20credit%20card%20payment.
+2025-02-07 17:56:28,843 - asyncio - DEBUG - Using selector: KqueueSelector
+2025-02-07 17:56:29,030 - utils.request_handler - INFO - Launching browser...
+2025-02-07 17:56:29,118 - utils.request_handler - INFO - Creating browser context...
+2025-02-07 17:56:29,189 - utils.request_handler - INFO - Visiting Google homepage...
+2025-02-07 17:56:30,316 - utils.request_handler - INFO - Waiting for page load...
+2025-02-07 17:56:34,044 - utils.request_handler - INFO - Navigating to search URL: https://www.lenskart.com/refund-exchange#:~:text=You%20will%20get%20a%20refund,case%20of%20credit%20card%20payment.
+2025-02-07 17:56:39,493 - utils.request_handler - INFO - Waiting for search results...
+2025-02-07 17:56:52,860 - utils.request_handler - INFO - Closing browser...
+2025-02-07 17:56:52,906 - utils.request_handler - ERROR - Request error: Page.wait_for_selector: Timeout 10000ms exceeded.
+Call log:
+  - waiting for locator("div#search") to be visible
+
+2025-02-07 17:56:52,907 - utils.sentiment_analyzer - INFO - Text too short, attempting to extract full article
+2025-02-07 17:56:52,907 - utils.request_handler - INFO - Starting Playwright for URL: https://en.wikipedia.org/wiki/Lenskart#:~:text=4%20External%20links-,History,replicate%20Titan%20Company's%20business.
+2025-02-07 17:56:52,907 - asyncio - DEBUG - Using selector: KqueueSelector
+2025-02-07 17:56:53,096 - utils.request_handler - INFO - Launching browser...
+2025-02-07 17:56:53,195 - utils.request_handler - INFO - Creating browser context...
+2025-02-07 17:56:53,265 - utils.request_handler - INFO - Visiting Google homepage...
+2025-02-07 17:56:54,188 - utils.request_handler - INFO - Waiting for page load...
+2025-02-07 17:56:57,639 - utils.request_handler - INFO - Navigating to search URL: https://en.wikipedia.org/wiki/Lenskart#:~:text=4%20External%20links-,History,replicate%20Titan%20Company's%20business.
+2025-02-07 17:56:59,533 - utils.request_handler - INFO - Waiting for search results...
+2025-02-07 17:57:10,042 - utils.request_handler - INFO - Closing browser...
+2025-02-07 17:57:10,068 - utils.request_handler - ERROR - Request error: Page.wait_for_selector: Timeout 10000ms exceeded.
+Call log:
+  - waiting for locator("div#search") to be visible
+
+2025-02-07 17:57:10,116 - scrapers.google_scraper - INFO - Found 91 results on page 1
+2025-02-07 17:57:12,502 - utils.request_handler - INFO - Starting Playwright for URL: https://www.google.com/search
+2025-02-07 17:57:12,503 - asyncio - DEBUG - Using selector: KqueueSelector
+2025-02-07 17:57:12,675 - utils.request_handler - INFO - Launching browser...
+2025-02-07 17:57:12,773 - utils.request_handler - INFO - Creating browser context...
+2025-02-07 17:57:12,843 - utils.request_handler - INFO - Visiting Google homepage...
+2025-02-07 17:57:13,720 - utils.request_handler - INFO - Waiting for page load...
+2025-02-07 17:57:17,623 - utils.request_handler - INFO - Navigating to search URL: https://www.google.com/search?q=Lenskart is scamming&num=100&start=100&hl=en&gl=us
+2025-02-07 17:57:20,304 - utils.request_handler - INFO - Waiting for search results...
+2025-02-07 17:57:21,017 - utils.request_handler - INFO - Closing browser...
+2025-02-07 17:57:21,214 - scrapers.google_scraper - DEBUG - Found 83 results in main container
+2025-02-07 17:57:21,246 - scrapers.google_scraper - INFO - Found 23 results on page 2
+2025-02-07 17:57:21,406 - scrapers.google_scraper - INFO - No more pages available
+2025-02-07 17:57:21,407 - scrapers.google_scraper - INFO - Total results found: 114
+2025-02-07 17:57:21,407 - __main__ - INFO - Saving results...
+2025-02-07 17:57:21,409 - __main__ - INFO - Saved 114 results to data/processed
+2025-02-07 17:58:11,085 - __main__ - INFO - Starting Google Search Scraper...
+2025-02-07 17:58:11,086 - __main__ - INFO - Initializing NLTK...
+2025-02-07 17:58:11,086 - utils.initialize_nltk - INFO - Starting NLTK initialization...
+2025-02-07 17:58:11,086 - utils.initialize_nltk - INFO - NLTK data directory: /Users/agustinbustamante/nltk_data
+2025-02-07 17:58:11,086 - utils.initialize_nltk - ERROR - Error in NLTK initialization: 
+**********************************************************************
+  Resource [93mvader_lexicon[0m not found.
+  Please use the NLTK Downloader to obtain the resource:
+
+  [31m>>> import nltk
+  >>> nltk.download('vader_lexicon')
+  [0m
+  For more information see: https://www.nltk.org/data.html
+
+  Attempted to load [93msentiment/vader_lexicon.zip[0m
+
+  Searched in:
+    - '/Users/agustinbustamante/nltk_data'
+    - '/Users/agustinbustamante/scrapper-test/venv/nltk_data'
+    - '/Users/agustinbustamante/scrapper-test/venv/share/nltk_data'
+    - '/Users/agustinbustamante/scrapper-test/venv/lib/nltk_data'
+    - '/usr/share/nltk_data'
+    - '/usr/local/share/nltk_data'
+    - '/usr/lib/nltk_data'
+    - '/usr/local/lib/nltk_data'
+**********************************************************************
+
+2025-02-07 17:58:11,086 - utils.initialize_nltk - WARNING - Falling back to TextBlob only
+2025-02-07 17:58:11,086 - __main__ - INFO - Processing arguments...
+2025-02-07 17:58:11,086 - __main__ - INFO - Search parameters: keyword='Lenskart is scamming', date='02/10/2024'
+2025-02-07 17:58:11,086 - __main__ - INFO - Initializing scraper...
+2025-02-07 17:58:11,088 - utils.sentiment_analyzer - WARNING - Could not initialize VADER: 
+**********************************************************************
+  Resource [93mvader_lexicon[0m not found.
+  Please use the NLTK Downloader to obtain the resource:
+
+  [31m>>> import nltk
+  >>> nltk.download('vader_lexicon')
+  [0m
+  For more information see: https://www.nltk.org/data.html
+
+  Attempted to load [93msentiment/vader_lexicon.zip/vader_lexicon/vader_lexicon.txt[0m
+
+  Searched in:
+    - '/Users/agustinbustamante/nltk_data'
+    - '/Users/agustinbustamante/scrapper-test/venv/nltk_data'
+    - '/Users/agustinbustamante/scrapper-test/venv/share/nltk_data'
+    - '/Users/agustinbustamante/scrapper-test/venv/lib/nltk_data'
+    - '/usr/share/nltk_data'
+    - '/usr/local/share/nltk_data'
+    - '/usr/lib/nltk_data'
+    - '/usr/local/lib/nltk_data'
+    - ''
+**********************************************************************
+
+2025-02-07 17:58:11,088 - utils.sentiment_analyzer - INFO - Using TextBlob only
+2025-02-07 17:58:11,090 - __main__ - INFO - Starting search...
+2025-02-07 17:58:11,090 - scrapers.google_scraper - INFO - Searching for: Lenskart is scamming (date: 02/10/2024)
+2025-02-07 17:58:11,090 - utils.request_handler - INFO - Starting Playwright for URL: https://www.google.com/search
+2025-02-07 17:58:11,090 - asyncio - DEBUG - Using selector: KqueueSelector
+2025-02-07 17:58:11,240 - utils.request_handler - INFO - Launching browser...
+2025-02-07 17:58:11,340 - utils.request_handler - INFO - Creating browser context...
+2025-02-07 17:58:11,412 - utils.request_handler - INFO - Visiting Google homepage...
+2025-02-07 17:58:16,227 - utils.request_handler - INFO - Navigating to search URL: https://www.google.com/search?q=Lenskart is scamming&num=100&start=0&hl=en&gl=us
+2025-02-07 17:58:20,466 - utils.request_handler - INFO - Closing browser...
+2025-02-07 17:58:20,619 - scrapers.google_scraper - DEBUG - Found 106 results in main container
+2025-02-07 17:58:20,637 - utils.sentiment_analyzer - INFO - Text too short, attempting to extract full article
+2025-02-07 17:58:20,637 - utils.request_handler - INFO - Starting Playwright for URL: https://www.quora.com/Is-buying-lenses-from-Lenskart-safe
+2025-02-07 17:58:20,637 - asyncio - DEBUG - Using selector: KqueueSelector
+2025-02-07 17:58:20,785 - utils.request_handler - INFO - Launching browser...
+2025-02-07 17:58:20,875 - utils.request_handler - INFO - Creating browser context...
+2025-02-07 17:58:20,949 - utils.request_handler - INFO - Navigating to URL: https://www.quora.com/Is-buying-lenses-from-Lenskart-safe
+2025-02-07 17:58:51,697 - utils.request_handler - INFO - Closing browser...
+2025-02-07 17:58:51,749 - utils.request_handler - ERROR - Request error: Timeout 30000ms exceeded.
+2025-02-07 17:58:51,750 - utils.sentiment_analyzer - INFO - Text too short, attempting to extract full article
+2025-02-07 17:58:51,750 - utils.request_handler - INFO - Starting Playwright for URL: https://www.lenskart.com/refund-exchange#:~:text=You%20will%20get%20a%20refund,case%20of%20credit%20card%20payment.
+2025-02-07 17:58:51,750 - asyncio - DEBUG - Using selector: KqueueSelector
+2025-02-07 17:58:51,903 - utils.request_handler - INFO - Launching browser...
+2025-02-07 17:58:52,006 - utils.request_handler - INFO - Creating browser context...
+2025-02-07 17:58:52,076 - utils.request_handler - INFO - Navigating to URL: https://www.lenskart.com/refund-exchange#:~:text=You%20will%20get%20a%20refund,case%20of%20credit%20card%20payment.
+2025-02-07 17:59:01,211 - utils.request_handler - INFO - Closing browser...
+2025-02-07 17:59:01,264 - utils.sentiment_analyzer - INFO - Text too short, attempting to extract full article
+2025-02-07 17:59:01,264 - utils.request_handler - INFO - Starting Playwright for URL: https://en.wikipedia.org/wiki/Lenskart#:~:text=4%20External%20links-,History,replicate%20Titan%20Company's%20business.
+2025-02-07 17:59:01,264 - asyncio - DEBUG - Using selector: KqueueSelector
+2025-02-07 17:59:01,421 - utils.request_handler - INFO - Launching browser...
+2025-02-07 17:59:01,522 - utils.request_handler - INFO - Creating browser context...
+2025-02-07 17:59:01,593 - utils.request_handler - INFO - Navigating to URL: https://en.wikipedia.org/wiki/Lenskart#:~:text=4%20External%20links-,History,replicate%20Titan%20Company's%20business.
+2025-02-07 17:59:03,643 - utils.request_handler - INFO - Closing browser...
+2025-02-07 17:59:03,732 - scrapers.google_scraper - INFO - Found 91 results on page 1
+2025-02-07 17:59:07,244 - utils.request_handler - INFO - Starting Playwright for URL: https://www.google.com/search
+2025-02-07 17:59:07,244 - asyncio - DEBUG - Using selector: KqueueSelector
+2025-02-07 17:59:07,398 - utils.request_handler - INFO - Launching browser...
+2025-02-07 17:59:07,499 - utils.request_handler - INFO - Creating browser context...
+2025-02-07 17:59:07,571 - utils.request_handler - INFO - Visiting Google homepage...
+2025-02-07 17:59:12,585 - utils.request_handler - INFO - Navigating to search URL: https://www.google.com/search?q=Lenskart is scamming&num=100&start=100&hl=en&gl=us
+2025-02-07 17:59:15,879 - utils.request_handler - INFO - Closing browser...
+2025-02-07 17:59:16,070 - scrapers.google_scraper - DEBUG - Found 83 results in main container
+2025-02-07 17:59:16,101 - scrapers.google_scraper - INFO - Found 20 results on page 2
+2025-02-07 17:59:16,254 - scrapers.google_scraper - INFO - No more pages available
+2025-02-07 17:59:16,254 - scrapers.google_scraper - INFO - Total results found: 111
+2025-02-07 17:59:16,254 - __main__ - INFO - Saving results...
+2025-02-07 17:59:16,256 - __main__ - INFO - Saved 111 results to data/processed
+2025-02-07 17:59:45,610 - __main__ - INFO - Starting Google Search Scraper...
+2025-02-07 17:59:45,610 - __main__ - INFO - Initializing NLTK...
+2025-02-07 17:59:45,610 - utils.initialize_nltk - INFO - Starting NLTK initialization...
+2025-02-07 17:59:45,610 - utils.initialize_nltk - INFO - NLTK data directory: /Users/agustinbustamante/nltk_data
+2025-02-07 17:59:45,610 - utils.initialize_nltk - ERROR - Error in NLTK initialization: 
+**********************************************************************
+  Resource [93mvader_lexicon[0m not found.
+  Please use the NLTK Downloader to obtain the resource:
+
+  [31m>>> import nltk
+  >>> nltk.download('vader_lexicon')
+  [0m
+  For more information see: https://www.nltk.org/data.html
+
+  Attempted to load [93msentiment/vader_lexicon.zip[0m
+
+  Searched in:
+    - '/Users/agustinbustamante/nltk_data'
+    - '/Users/agustinbustamante/scrapper-test/venv/nltk_data'
+    - '/Users/agustinbustamante/scrapper-test/venv/share/nltk_data'
+    - '/Users/agustinbustamante/scrapper-test/venv/lib/nltk_data'
+    - '/usr/share/nltk_data'
+    - '/usr/local/share/nltk_data'
+    - '/usr/lib/nltk_data'
+    - '/usr/local/lib/nltk_data'
+**********************************************************************
+
+2025-02-07 17:59:45,610 - utils.initialize_nltk - WARNING - Falling back to TextBlob only
+2025-02-07 17:59:45,610 - __main__ - INFO - Processing arguments...
+2025-02-07 17:59:45,611 - __main__ - INFO - Search parameters: keyword='Lenskart is scamming', date='02/10/2024'
+2025-02-07 17:59:45,611 - __main__ - INFO - Initializing scraper...
+2025-02-07 17:59:45,613 - utils.sentiment_analyzer - WARNING - Could not initialize VADER: 
+**********************************************************************
+  Resource [93mvader_lexicon[0m not found.
+  Please use the NLTK Downloader to obtain the resource:
+
+  [31m>>> import nltk
+  >>> nltk.download('vader_lexicon')
+  [0m
+  For more information see: https://www.nltk.org/data.html
+
+  Attempted to load [93msentiment/vader_lexicon.zip/vader_lexicon/vader_lexicon.txt[0m
+
+  Searched in:
+    - '/Users/agustinbustamante/nltk_data'
+    - '/Users/agustinbustamante/scrapper-test/venv/nltk_data'
+    - '/Users/agustinbustamante/scrapper-test/venv/share/nltk_data'
+    - '/Users/agustinbustamante/scrapper-test/venv/lib/nltk_data'
+    - '/usr/share/nltk_data'
+    - '/usr/local/share/nltk_data'
+    - '/usr/lib/nltk_data'
+    - '/usr/local/lib/nltk_data'
+    - ''
+**********************************************************************
+
+2025-02-07 17:59:45,613 - utils.sentiment_analyzer - INFO - Using TextBlob only
+2025-02-07 17:59:45,615 - __main__ - INFO - Starting search...
+2025-02-07 17:59:45,615 - scrapers.google_scraper - INFO - Searching for: Lenskart is scamming (date: 02/10/2024)
+2025-02-07 17:59:45,615 - utils.request_handler - INFO - Starting Playwright for URL: https://www.google.com/search
+2025-02-07 17:59:45,615 - asyncio - DEBUG - Using selector: KqueueSelector
+2025-02-07 17:59:45,766 - utils.request_handler - INFO - Launching browser...
+2025-02-07 17:59:45,865 - utils.request_handler - INFO - Creating browser context...
+2025-02-07 17:59:45,938 - utils.request_handler - INFO - Visiting Google homepage...
+2025-02-07 17:59:50,839 - utils.request_handler - INFO - Navigating to search URL: https://www.google.com/search?q=Lenskart is scamming&num=100&start=0&hl=en&gl=us
+2025-02-07 17:59:53,928 - utils.request_handler - INFO - Closing browser...
+2025-02-07 17:59:54,093 - scrapers.google_scraper - DEBUG - Found 107 results in main container
+2025-02-07 17:59:54,113 - utils.sentiment_analyzer - INFO - Text too short, attempting to extract full article
+2025-02-07 17:59:54,113 - utils.request_handler - INFO - Starting Playwright for URL: https://www.quora.com/Is-buying-lenses-from-Lenskart-safe
+2025-02-07 17:59:54,113 - asyncio - DEBUG - Using selector: KqueueSelector
+2025-02-07 17:59:54,266 - utils.request_handler - INFO - Launching browser...
+2025-02-07 17:59:54,360 - utils.request_handler - INFO - Creating browser context...
+2025-02-07 17:59:54,431 - utils.request_handler - INFO - Navigating to URL: https://www.quora.com/Is-buying-lenses-from-Lenskart-safe
+2025-02-07 18:00:25,201 - utils.request_handler - INFO - Closing browser...
+2025-02-07 18:00:25,243 - utils.request_handler - ERROR - Request error: Timeout 30000ms exceeded.
+2025-02-07 18:00:25,244 - utils.sentiment_analyzer - INFO - Text too short, attempting to extract full article
+2025-02-07 18:00:25,244 - utils.request_handler - INFO - Starting Playwright for URL: https://www.lenskart.com/refund-exchange#:~:text=You%20will%20get%20a%20refund,case%20of%20credit%20card%20payment.
+2025-02-07 18:00:25,244 - asyncio - DEBUG - Using selector: KqueueSelector
+2025-02-07 18:00:25,462 - utils.request_handler - INFO - Launching browser...
+2025-02-07 18:00:25,558 - utils.request_handler - INFO - Creating browser context...
+2025-02-07 18:00:25,636 - utils.request_handler - INFO - Navigating to URL: https://www.lenskart.com/refund-exchange#:~:text=You%20will%20get%20a%20refund,case%20of%20credit%20card%20payment.
+2025-02-07 18:00:33,455 - utils.request_handler - INFO - Closing browser...
+2025-02-07 18:00:33,509 - utils.sentiment_analyzer - INFO - Text too short, attempting to extract full article
+2025-02-07 18:00:33,509 - utils.request_handler - INFO - Starting Playwright for URL: https://en.wikipedia.org/wiki/Lenskart#:~:text=4%20External%20links-,History,replicate%20Titan%20Company's%20business.
+2025-02-07 18:00:33,509 - asyncio - DEBUG - Using selector: KqueueSelector
+2025-02-07 18:00:33,703 - utils.request_handler - INFO - Launching browser...
+2025-02-07 18:00:33,806 - utils.request_handler - INFO - Creating browser context...
+2025-02-07 18:00:33,883 - utils.request_handler - INFO - Navigating to URL: https://en.wikipedia.org/wiki/Lenskart#:~:text=4%20External%20links-,History,replicate%20Titan%20Company's%20business.
+2025-02-07 18:00:35,874 - utils.request_handler - INFO - Closing browser...
+2025-02-07 18:00:35,979 - scrapers.google_scraper - INFO - Found 92 results on page 1
+2025-02-07 18:00:39,156 - __main__ - INFO - Starting Google Search Scraper...
+2025-02-07 18:00:39,156 - __main__ - INFO - Initializing NLTK...
+2025-02-07 18:00:39,156 - utils.initialize_nltk - INFO - Starting NLTK initialization...
+2025-02-07 18:00:39,156 - utils.initialize_nltk - INFO - Using TextBlob for sentiment analysis
+2025-02-07 18:00:39,156 - __main__ - INFO - Processing arguments...
+2025-02-07 18:00:39,156 - __main__ - INFO - Search parameters: keyword='Lenskart is scamming', date='02/10/2024'
+2025-02-07 18:00:39,156 - __main__ - INFO - Initializing scraper...
+2025-02-07 18:00:39,159 - utils.sentiment_analyzer - WARNING - Could not initialize VADER: 
+**********************************************************************
+  Resource [93mvader_lexicon[0m not found.
+  Please use the NLTK Downloader to obtain the resource:
+
+  [31m>>> import nltk
+  >>> nltk.download('vader_lexicon')
+  [0m
+  For more information see: https://www.nltk.org/data.html
+
+  Attempted to load [93msentiment/vader_lexicon.zip/vader_lexicon/vader_lexicon.txt[0m
+
+  Searched in:
+    - '/Users/agustinbustamante/nltk_data'
+    - '/Users/agustinbustamante/scrapper-test/venv/nltk_data'
+    - '/Users/agustinbustamante/scrapper-test/venv/share/nltk_data'
+    - '/Users/agustinbustamante/scrapper-test/venv/lib/nltk_data'
+    - '/usr/share/nltk_data'
+    - '/usr/local/share/nltk_data'
+    - '/usr/lib/nltk_data'
+    - '/usr/local/lib/nltk_data'
+    - ''
+**********************************************************************
+
+2025-02-07 18:00:39,159 - utils.sentiment_analyzer - INFO - Using TextBlob only
+2025-02-07 18:00:39,161 - __main__ - INFO - Starting search...
+2025-02-07 18:00:39,161 - scrapers.google_scraper - INFO - Searching for: Lenskart is scamming (date: 02/10/2024)
+2025-02-07 18:00:39,161 - utils.request_handler - INFO - Starting Playwright for URL: https://www.google.com/search
+2025-02-07 18:00:39,161 - asyncio - DEBUG - Using selector: KqueueSelector
+2025-02-07 18:00:39,318 - utils.request_handler - INFO - Launching browser...
+2025-02-07 18:00:39,424 - utils.request_handler - INFO - Creating browser context...
+2025-02-07 18:00:39,495 - utils.request_handler - INFO - Visiting Google homepage...
+2025-02-07 18:00:44,318 - utils.request_handler - INFO - Navigating to search URL: https://www.google.com/search?q=Lenskart is scamming&num=100&start=0&hl=en&gl=us
+2025-02-07 18:00:47,539 - utils.request_handler - INFO - Closing browser...
+2025-02-07 18:00:47,698 - scrapers.google_scraper - DEBUG - Found 107 results in main container
+2025-02-07 18:00:47,718 - utils.sentiment_analyzer - INFO - Text too short, attempting to extract full article
+2025-02-07 18:00:47,718 - utils.request_handler - INFO - Starting Playwright for URL: https://www.quora.com/Is-buying-lenses-from-Lenskart-safe
+2025-02-07 18:00:47,718 - asyncio - DEBUG - Using selector: KqueueSelector
+2025-02-07 18:00:47,875 - utils.request_handler - INFO - Launching browser...
+2025-02-07 18:00:47,975 - utils.request_handler - INFO - Creating browser context...
+2025-02-07 18:00:48,049 - utils.request_handler - INFO - Navigating to URL: https://www.quora.com/Is-buying-lenses-from-Lenskart-safe
+2025-02-07 18:00:50,447 - utils.request_handler - INFO - Closing browser...
+2025-02-07 18:00:50,527 - utils.sentiment_analyzer - INFO - Text too short, attempting to extract full article
+2025-02-07 18:00:50,527 - utils.request_handler - INFO - Starting Playwright for URL: https://www.lenskart.com/refund-exchange#:~:text=You%20will%20get%20a%20refund,case%20of%20credit%20card%20payment.
+2025-02-07 18:00:50,527 - asyncio - DEBUG - Using selector: KqueueSelector
+2025-02-07 18:00:50,681 - utils.request_handler - INFO - Launching browser...
+2025-02-07 18:00:50,782 - utils.request_handler - INFO - Creating browser context...
+2025-02-07 18:00:50,850 - utils.request_handler - INFO - Navigating to URL: https://www.lenskart.com/refund-exchange#:~:text=You%20will%20get%20a%20refund,case%20of%20credit%20card%20payment.
+2025-02-07 18:01:20,306 - utils.request_handler - INFO - Closing browser...
+2025-02-07 18:01:20,528 - asyncio - ERROR - Future exception was never retrieved
+future: <Future finished exception=TargetClosedError('Target page, context or browser has been closed')>
+playwright._impl._errors.TargetClosedError: Target page, context or browser has been closed
+2025-02-07 18:01:21,650 - __main__ - INFO - Starting Google Search Scraper...
+2025-02-07 18:01:21,650 - __main__ - INFO - Initializing NLTK...
+2025-02-07 18:01:21,650 - utils.initialize_nltk - INFO - Starting NLTK initialization...
+2025-02-07 18:02:31,656 - __main__ - INFO - Starting Google Search Scraper...
+2025-02-07 18:02:31,657 - __main__ - INFO - Initializing NLTK...
+2025-02-07 18:02:31,657 - utils.initialize_nltk - INFO - Starting NLTK initialization...
+2025-02-07 18:02:31,657 - utils.initialize_nltk - INFO - Using TextBlob for sentiment analysis
+2025-02-07 18:02:31,657 - __main__ - INFO - Processing arguments...
+2025-02-07 18:02:31,657 - __main__ - INFO - Search parameters: keyword='Lenskart is scamming', date='02/10/2024'
+2025-02-07 18:02:31,657 - __main__ - INFO - Initializing scraper...
+2025-02-07 18:02:31,659 - utils.sentiment_analyzer - WARNING - Could not initialize VADER: 
+**********************************************************************
+  Resource [93mvader_lexicon[0m not found.
+  Please use the NLTK Downloader to obtain the resource:
+
+  [31m>>> import nltk
+  >>> nltk.download('vader_lexicon')
+  [0m
+  For more information see: https://www.nltk.org/data.html
+
+  Attempted to load [93msentiment/vader_lexicon.zip/vader_lexicon/vader_lexicon.txt[0m
+
+  Searched in:
+    - '/Users/agustinbustamante/nltk_data'
+    - '/Users/agustinbustamante/scrapper-test/venv/nltk_data'
+    - '/Users/agustinbustamante/scrapper-test/venv/share/nltk_data'
+    - '/Users/agustinbustamante/scrapper-test/venv/lib/nltk_data'
+    - '/usr/share/nltk_data'
+    - '/usr/local/share/nltk_data'
+    - '/usr/lib/nltk_data'
+    - '/usr/local/lib/nltk_data'
+    - ''
+**********************************************************************
+
+2025-02-07 18:02:31,659 - utils.sentiment_analyzer - INFO - Using TextBlob only
+2025-02-07 18:02:31,661 - __main__ - INFO - Starting search...
+2025-02-07 18:02:31,661 - scrapers.google_scraper - INFO - Searching for: Lenskart is scamming (date: 02/10/2024)
+2025-02-07 18:02:31,661 - utils.request_handler - INFO - Starting Playwright for URL: https://www.google.com/search
+2025-02-07 18:02:31,661 - asyncio - DEBUG - Using selector: KqueueSelector
+2025-02-07 18:02:31,847 - utils.request_handler - INFO - Launching browser...
+2025-02-07 18:02:31,948 - utils.request_handler - INFO - Creating browser context...
+2025-02-07 18:02:32,019 - utils.request_handler - INFO - Visiting Google homepage...
+2025-02-07 18:02:36,450 - utils.request_handler - INFO - Navigating to search URL: https://www.google.com/search?q=Lenskart is scamming&num=100&start=0&hl=en&gl=us
+2025-02-07 18:02:39,896 - utils.request_handler - INFO - Closing browser...
+2025-02-07 18:02:40,056 - scrapers.google_scraper - DEBUG - Found 107 results in main container
+2025-02-07 18:02:40,075 - utils.sentiment_analyzer - INFO - Text too short, attempting to extract full article
+2025-02-07 18:02:40,075 - utils.request_handler - INFO - Starting Playwright for URL: https://www.lenskart.com/refund-exchange#:~:text=You%20will%20get%20a%20refund,case%20of%20credit%20card%20payment.
+2025-02-07 18:02:40,075 - asyncio - DEBUG - Using selector: KqueueSelector
+2025-02-07 18:02:40,255 - utils.request_handler - INFO - Launching browser...
+2025-02-07 18:02:40,338 - utils.request_handler - INFO - Creating browser context...
+2025-02-07 18:02:40,409 - utils.request_handler - INFO - Navigating to URL: https://www.lenskart.com/refund-exchange#:~:text=You%20will%20get%20a%20refund,case%20of%20credit%20card%20payment.
+2025-02-07 18:02:48,051 - utils.request_handler - INFO - Closing browser...
+2025-02-07 18:02:48,100 - utils.sentiment_analyzer - INFO - Text too short, attempting to extract full article
+2025-02-07 18:02:48,100 - utils.request_handler - INFO - Starting Playwright for URL: https://indis.academy/swot-analysis/lenskart-swot-analysis/#:~:text=of%2Dmouth%20referrals.-,Weaknesses,technology%20infrastructure%20can%20impact%20profitability.
+2025-02-07 18:02:48,100 - asyncio - DEBUG - Using selector: KqueueSelector
+2025-02-07 18:02:48,253 - utils.request_handler - INFO - Launching browser...
+2025-02-07 18:02:48,350 - utils.request_handler - INFO - Creating browser context...
+2025-02-07 18:02:48,420 - utils.request_handler - INFO - Navigating to URL: https://indis.academy/swot-analysis/lenskart-swot-analysis/#:~:text=of%2Dmouth%20referrals.-,Weaknesses,technology%20infrastructure%20can%20impact%20profitability.
+2025-02-07 18:02:53,573 - utils.request_handler - INFO - Closing browser...
+2025-02-07 18:02:53,633 - scrapers.google_scraper - INFO - Found 92 results on page 1
+2025-02-07 18:02:57,492 - utils.request_handler - INFO - Starting Playwright for URL: https://www.google.com/search
+2025-02-07 18:02:57,492 - asyncio - DEBUG - Using selector: KqueueSelector
+2025-02-07 18:02:57,651 - utils.request_handler - INFO - Launching browser...
+2025-02-07 18:02:57,753 - utils.request_handler - INFO - Creating browser context...
+2025-02-07 18:02:57,826 - utils.request_handler - INFO - Visiting Google homepage...
+2025-02-07 18:03:03,732 - utils.request_handler - INFO - Navigating to search URL: https://www.google.com/search?q=Lenskart is scamming&num=100&start=100&hl=en&gl=us
+2025-02-07 18:03:07,046 - utils.request_handler - INFO - Closing browser...
+2025-02-07 18:03:07,233 - scrapers.google_scraper - DEBUG - Found 83 results in main container
+2025-02-07 18:03:07,265 - scrapers.google_scraper - INFO - Found 22 results on page 2
+2025-02-07 18:03:07,421 - scrapers.google_scraper - INFO - No more pages available
+2025-02-07 18:03:07,422 - scrapers.google_scraper - INFO - Total results found: 114
+2025-02-07 18:03:07,422 - __main__ - INFO - Saving results...
+2025-02-07 18:03:07,423 - __main__ - INFO - Saved 114 results to data/processed
+2025-02-07 18:04:00,580 - __main__ - INFO - Starting Google Search Scraper...
+2025-02-07 18:04:00,580 - __main__ - INFO - Initializing NLTK...
+2025-02-07 18:04:00,580 - utils.initialize_nltk - INFO - Starting NLTK initialization...
+2025-02-07 18:04:30,622 - __main__ - INFO - Starting Google Search Scraper...
+2025-02-07 18:04:30,622 - __main__ - INFO - Initializing NLTK...
+2025-02-07 18:04:30,622 - utils.initialize_nltk - INFO - Starting NLTK initialization...
+2025-02-07 18:04:30,622 - utils.initialize_nltk - INFO - Downloading VADER lexicon...
+2025-02-07 18:10:36,945 - __main__ - INFO - Starting Google Search Scraper...
+2025-02-07 18:10:36,945 - __main__ - INFO - Initializing NLTK...
+2025-02-07 18:10:36,946 - utils.initialize_nltk - INFO - Starting NLTK initialization...
+2025-02-07 18:10:36,946 - utils.initialize_nltk - INFO - Downloading VADER lexicon...
+2025-02-07 18:11:06,948 - utils.initialize_nltk - ERROR - Download timed out after 30 seconds
+2025-02-07 18:11:06,948 - utils.initialize_nltk - INFO - Attempting alternative download method...
+2025-02-07 18:17:04,754 - __main__ - INFO - Starting Google Search Scraper...
+2025-02-07 18:17:04,754 - __main__ - INFO - Initializing NLTK...
+2025-02-07 18:17:04,754 - utils.initialize_nltk - INFO - Starting NLTK initialization...
+2025-02-07 18:18:19,969 - __main__ - INFO - Starting Google Search Scraper...
+2025-02-07 18:18:19,969 - __main__ - INFO - Initializing NLTK...
+2025-02-07 18:18:19,969 - utils.initialize_nltk - INFO - Starting NLTK initialization...
+2025-02-07 18:18:19,969 - utils.initialize_nltk - INFO - Checking VADER directory: /Users/agustinbustamante/nltk_data/sentiment/vader_lexicon
+2025-02-07 18:18:19,969 - utils.initialize_nltk - INFO - VADER lexicon already installed and accessible
+2025-02-07 18:18:19,969 - __main__ - INFO - Processing arguments...
+2025-02-07 18:18:19,970 - __main__ - INFO - Search parameters: keyword='Lenskart is scamming', date='02/10/2024'
+2025-02-07 18:18:19,970 - __main__ - INFO - Initializing scraper...
+2025-02-07 18:18:19,972 - utils.sentiment_analyzer - WARNING - Could not initialize VADER: 
+**********************************************************************
+  Resource [93mvader_lexicon[0m not found.
+  Please use the NLTK Downloader to obtain the resource:
+
+  [31m>>> import nltk
+  >>> nltk.download('vader_lexicon')
+  [0m
+  For more information see: https://www.nltk.org/data.html
+
+  Attempted to load [93msentiment/vader_lexicon.zip/vader_lexicon/vader_lexicon.txt[0m
+
+  Searched in:
+    - '/Users/agustinbustamante/nltk_data'
+    - '/Users/agustinbustamante/scrapper-test/venv/nltk_data'
+    - '/Users/agustinbustamante/scrapper-test/venv/share/nltk_data'
+    - '/Users/agustinbustamante/scrapper-test/venv/lib/nltk_data'
+    - '/usr/share/nltk_data'
+    - '/usr/local/share/nltk_data'
+    - '/usr/lib/nltk_data'
+    - '/usr/local/lib/nltk_data'
+    - ''
+**********************************************************************
+
+2025-02-07 18:18:19,972 - utils.sentiment_analyzer - INFO - Using TextBlob only
+2025-02-07 18:18:19,974 - __main__ - INFO - Starting search...
+2025-02-07 18:18:19,974 - scrapers.google_scraper - INFO - Searching for: Lenskart is scamming (date: 02/10/2024)
+2025-02-07 18:18:19,974 - utils.request_handler - INFO - Starting Playwright for URL: https://www.google.com/search
+2025-02-07 18:18:19,974 - asyncio - DEBUG - Using selector: KqueueSelector
+2025-02-07 18:18:20,317 - utils.request_handler - INFO - Launching browser...
+2025-02-07 18:18:20,524 - utils.request_handler - INFO - Creating browser context...
+2025-02-07 18:18:20,720 - utils.request_handler - INFO - Visiting Google homepage...
+2025-02-07 18:18:25,664 - utils.request_handler - INFO - Navigating to search URL: https://www.google.com/search?q=Lenskart is scamming&num=100&start=0&hl=en&gl=us
+2025-02-07 18:18:31,318 - utils.request_handler - INFO - Closing browser...
+2025-02-07 18:18:31,474 - scrapers.google_scraper - DEBUG - Found 106 results in main container
+2025-02-07 18:18:31,493 - utils.sentiment_analyzer - INFO - Text too short, attempting to extract full article
+2025-02-07 18:18:31,493 - utils.request_handler - INFO - Starting Playwright for URL: https://www.quora.com/Is-buying-lenses-from-Lenskart-safe
+2025-02-07 18:18:31,494 - asyncio - DEBUG - Using selector: KqueueSelector
+2025-02-07 18:18:31,677 - utils.request_handler - INFO - Launching browser...
+2025-02-07 18:18:31,776 - utils.request_handler - INFO - Creating browser context...
+2025-02-07 18:18:31,847 - utils.request_handler - INFO - Navigating to URL: https://www.quora.com/Is-buying-lenses-from-Lenskart-safe
+2025-02-07 18:19:02,902 - utils.request_handler - INFO - Closing browser...
+2025-02-07 18:19:02,934 - utils.request_handler - ERROR - Request error: Timeout 30000ms exceeded.
+2025-02-07 18:19:02,935 - utils.sentiment_analyzer - INFO - Text too short, attempting to extract full article
+2025-02-07 18:19:02,935 - utils.request_handler - INFO - Starting Playwright for URL: https://www.lenskart.com/refund-exchange#:~:text=You%20will%20get%20a%20refund,case%20of%20credit%20card%20payment.
+2025-02-07 18:19:02,935 - asyncio - DEBUG - Using selector: KqueueSelector
+2025-02-07 18:19:03,136 - utils.request_handler - INFO - Launching browser...
+2025-02-07 18:19:03,233 - utils.request_handler - INFO - Creating browser context...
+2025-02-07 18:19:03,305 - utils.request_handler - INFO - Navigating to URL: https://www.lenskart.com/refund-exchange#:~:text=You%20will%20get%20a%20refund,case%20of%20credit%20card%20payment.
+2025-02-07 18:19:10,774 - utils.request_handler - INFO - Closing browser...
+2025-02-07 18:19:10,824 - utils.sentiment_analyzer - INFO - Text too short, attempting to extract full article
+2025-02-07 18:19:10,825 - utils.request_handler - INFO - Starting Playwright for URL: https://en.wikipedia.org/wiki/Lenskart#:~:text=4%20External%20links-,History,replicate%20Titan%20Company's%20business.
+2025-02-07 18:19:10,825 - asyncio - DEBUG - Using selector: KqueueSelector
+2025-02-07 18:19:10,978 - utils.request_handler - INFO - Launching browser...
+2025-02-07 18:19:11,074 - utils.request_handler - INFO - Creating browser context...
+2025-02-07 18:19:11,144 - utils.request_handler - INFO - Navigating to URL: https://en.wikipedia.org/wiki/Lenskart#:~:text=4%20External%20links-,History,replicate%20Titan%20Company's%20business.
+2025-02-07 18:19:13,381 - utils.request_handler - INFO - Closing browser...
+2025-02-07 18:19:13,469 - scrapers.google_scraper - INFO - Found 91 results on page 1
+2025-02-07 18:19:15,876 - utils.request_handler - INFO - Starting Playwright for URL: https://www.google.com/search
+2025-02-07 18:19:15,877 - asyncio - DEBUG - Using selector: KqueueSelector
+2025-02-07 18:19:16,058 - utils.request_handler - INFO - Launching browser...
+2025-02-07 18:19:16,155 - utils.request_handler - INFO - Creating browser context...
+2025-02-07 18:19:16,225 - utils.request_handler - INFO - Visiting Google homepage...
+2025-02-07 18:19:21,115 - utils.request_handler - INFO - Navigating to search URL: https://www.google.com/search?q=Lenskart is scamming&num=100&start=100&hl=en&gl=us
+2025-02-07 18:19:25,063 - utils.request_handler - INFO - Closing browser...
+2025-02-07 18:19:25,245 - scrapers.google_scraper - DEBUG - Found 83 results in main container
+2025-02-07 18:19:25,277 - scrapers.google_scraper - INFO - Found 23 results on page 2
+2025-02-07 18:19:26,938 - __main__ - INFO - Starting Google Search Scraper...
+2025-02-07 18:19:26,938 - __main__ - INFO - Initializing NLTK...
+2025-02-07 18:19:26,938 - utils.initialize_nltk - INFO - Starting NLTK initialization...
+2025-02-07 18:19:26,938 - utils.initialize_nltk - INFO - Checking VADER directory: /Users/agustinbustamante/nltk_data/sentiment/vader_lexicon
+2025-02-07 18:19:26,939 - utils.initialize_nltk - INFO - VADER not found in NLTK data, attempting installation...
+2025-02-07 18:19:26,939 - utils.initialize_nltk - INFO - Found VADER lexicon in venv at venv/lib/python3.13/site-packages/vaderSentiment/vader_lexicon.txt
+2025-02-07 18:19:26,940 - utils.initialize_nltk - INFO - Created VADER zip at /Users/agustinbustamante/nltk_data/sentiment/vader_lexicon.zip
+2025-02-07 18:19:26,940 - __main__ - INFO - Processing arguments...
+2025-02-07 18:19:26,941 - __main__ - INFO - Search parameters: keyword='Lenskart is scamming', date='02/10/2024'
+2025-02-07 18:19:26,941 - __main__ - INFO - Initializing scraper...
+2025-02-07 18:19:26,946 - utils.sentiment_analyzer - INFO - VADER initialized successfully
+2025-02-07 18:19:26,949 - __main__ - INFO - Starting search...
+2025-02-07 18:19:26,949 - scrapers.google_scraper - INFO - Searching for: Lenskart is scamming (date: 02/10/2024)
+2025-02-07 18:19:26,949 - utils.request_handler - INFO - Starting Playwright for URL: https://www.google.com/search
+2025-02-07 18:19:26,949 - asyncio - DEBUG - Using selector: KqueueSelector
+2025-02-07 18:19:27,096 - utils.request_handler - INFO - Launching browser...
+2025-02-07 18:19:27,204 - utils.request_handler - INFO - Creating browser context...
+2025-02-07 18:19:27,273 - utils.request_handler - INFO - Visiting Google homepage...
+2025-02-07 18:19:31,796 - utils.request_handler - INFO - Navigating to search URL: https://www.google.com/search?q=Lenskart is scamming&num=100&start=0&hl=en&gl=us
+2025-02-07 18:19:34,917 - utils.request_handler - INFO - Closing browser...
+2025-02-07 18:19:35,067 - scrapers.google_scraper - DEBUG - Found 107 results in main container
+2025-02-07 18:19:35,088 - utils.sentiment_analyzer - INFO - Text too short, attempting to extract full article
+2025-02-07 18:19:35,088 - utils.request_handler - INFO - Starting Playwright for URL: https://www.quora.com/Is-buying-lenses-from-Lenskart-safe
+2025-02-07 18:19:35,088 - asyncio - DEBUG - Using selector: KqueueSelector
+2025-02-07 18:19:35,243 - utils.request_handler - INFO - Launching browser...
+2025-02-07 18:19:35,341 - utils.request_handler - INFO - Creating browser context...
+2025-02-07 18:19:35,411 - utils.request_handler - INFO - Navigating to URL: https://www.quora.com/Is-buying-lenses-from-Lenskart-safe
+2025-02-07 18:20:06,179 - utils.request_handler - INFO - Closing browser...
+2025-02-07 18:20:06,221 - utils.request_handler - ERROR - Request error: Timeout 30000ms exceeded.
+2025-02-07 18:20:06,222 - utils.sentiment_analyzer - INFO - Text too short, attempting to extract full article
+2025-02-07 18:20:06,222 - utils.request_handler - INFO - Starting Playwright for URL: https://www.lenskart.com/refund-exchange#:~:text=You%20will%20get%20a%20refund,case%20of%20credit%20card%20payment.
+2025-02-07 18:20:06,222 - asyncio - DEBUG - Using selector: KqueueSelector
+2025-02-07 18:20:06,443 - utils.request_handler - INFO - Launching browser...
+2025-02-07 18:20:06,545 - utils.request_handler - INFO - Creating browser context...
+2025-02-07 18:20:06,621 - utils.request_handler - INFO - Navigating to URL: https://www.lenskart.com/refund-exchange#:~:text=You%20will%20get%20a%20refund,case%20of%20credit%20card%20payment.
+2025-02-07 18:20:14,371 - utils.request_handler - INFO - Closing browser...
+2025-02-07 18:20:14,434 - utils.sentiment_analyzer - INFO - Text too short, attempting to extract full article
+2025-02-07 18:20:14,434 - utils.request_handler - INFO - Starting Playwright for URL: https://en.wikipedia.org/wiki/Lenskart#:~:text=4%20External%20links-,History,replicate%20Titan%20Company's%20business.
+2025-02-07 18:20:14,434 - asyncio - DEBUG - Using selector: KqueueSelector
+2025-02-07 18:20:14,627 - utils.request_handler - INFO - Launching browser...
+2025-02-07 18:20:14,722 - utils.request_handler - INFO - Creating browser context...
+2025-02-07 18:20:14,796 - utils.request_handler - INFO - Navigating to URL: https://en.wikipedia.org/wiki/Lenskart#:~:text=4%20External%20links-,History,replicate%20Titan%20Company's%20business.
+2025-02-07 18:20:16,799 - utils.request_handler - INFO - Closing browser...
+2025-02-07 18:20:16,915 - scrapers.google_scraper - INFO - Found 92 results on page 1
+2025-02-07 18:20:20,144 - utils.request_handler - INFO - Starting Playwright for URL: https://www.google.com/search
+2025-02-07 18:20:20,148 - asyncio - DEBUG - Using selector: KqueueSelector
+2025-02-07 18:20:20,369 - utils.request_handler - INFO - Launching browser...
+2025-02-07 18:20:20,471 - utils.request_handler - INFO - Creating browser context...
+2025-02-07 18:20:20,546 - utils.request_handler - INFO - Visiting Google homepage...
+2025-02-07 18:20:25,063 - utils.request_handler - INFO - Navigating to search URL: https://www.google.com/search?q=Lenskart is scamming&num=100&start=100&hl=en&gl=us
+2025-02-07 18:20:28,238 - utils.request_handler - INFO - Closing browser...
+2025-02-07 18:20:28,467 - scrapers.google_scraper - DEBUG - Found 92 results in main container
+2025-02-07 18:20:28,508 - scrapers.google_scraper - INFO - Found 28 results on page 2
+2025-02-07 18:20:28,636 - scrapers.google_scraper - INFO - No more pages available
+2025-02-07 18:20:28,636 - scrapers.google_scraper - INFO - Total results found: 120
+2025-02-07 18:20:28,636 - __main__ - INFO - Saving results...
+2025-02-07 18:20:28,639 - __main__ - INFO - Saved 120 results to data/processed

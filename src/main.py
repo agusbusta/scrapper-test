@@ -73,14 +73,20 @@ def main():
     
     try:
         # Initialize NLTK
+        logger.info("Initializing NLTK...")
         initialize_nltk()
         
         # Get arguments
+        logger.info("Processing arguments...")
         args = parse_args()
         logger.info(f"Search parameters: keyword='{args.keyword}', date='{args.date}'")
         
-        # Initialize and perform search
+        # Initialize scraper
+        logger.info("Initializing scraper...")
         scraper = GoogleScraper(config_path=args.config)
+        
+        # Perform search
+        logger.info("Starting search...")
         results = scraper.search(args.keyword, args.date)
         
         if not results:
@@ -88,6 +94,7 @@ def main():
             return
             
         # Save results
+        logger.info("Saving results...")
         output_dir = "data/processed"
         os.makedirs(output_dir, exist_ok=True)
         filename = f"{args.keyword.replace(' ', '_')}_{args.date.replace('/', '-')}"
