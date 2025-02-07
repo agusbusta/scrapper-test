@@ -6,7 +6,7 @@ setuptools>=65.5.1
 tqdm  
 
 # Browser automation
-playwright
+playwright>=1.41.0
 python-dotenv
 
 # Date handling
@@ -20,3 +20,12 @@ tweepy  # Twitter/X API
 facebook-sdk  # Facebook API
 instaloader  # Instagram
 tiktok-api  # Alternativa para TikTok 
+
+# Sentiment Analysis
+textblob>=0.17.1 
+
+# Added from the code block
+fake-useragent>=1.4.0 
+
+# Agregar estas líneas
+python-socks[asyncio]>=2.4.0 

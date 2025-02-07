@@ -28,7 +28,7 @@ class BlogScraper:
                 
             soup = BeautifulSoup(response.text, 'html.parser')
             
-            # Intentar extraer el contenido del blog
+            # Try to extract blog content
             title = soup.find(['h1', 'header'])
             content = soup.find(['article', 'div.post-content', 'div.entry-content'])
             author = soup.find(['a.author', 'span.author', 'div.author'])

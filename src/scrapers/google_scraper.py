@@ -4,19 +4,21 @@ import urllib.parse
 from bs4 import BeautifulSoup
 import logging
 from utils.request_handler import RequestHandler
+from utils.sentiment_analyzer import SentimentAnalyzer
 
 class GoogleScraper:
     def __init__(self, config_path: str = "config/config.yaml"):
         self.request_handler = RequestHandler(config_path)
         self.config = self.request_handler.config
+        self.sentiment_analyzer = SentimentAnalyzer()
         self._setup_logging()
         
     def _setup_logging(self):
         logging.basicConfig(
-            level=logging.DEBUG,
+            level=logging.INFO,
             format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
             handlers=[
-                logging.FileHandler('logs/scraper.log'),
+                logging.FileHandler('logs/google_scraper.log'),
                 logging.StreamHandler()
             ]
         )
@@ -68,78 +70,87 @@ class GoogleScraper:
                 return platform_type
         return "other"
         
+    def search(self, keyword: str, date: str) -> List[Dict]:
+        """Perform Google search with date filtering"""
+        self.logger.info(f"Searching for: {keyword} (date: {date})")
+        
+        try:
+            params = {
+                'q': keyword,
+                'num': 10,
+                'hl': 'en',
+                'gl': 'us'
+            }
+            
+            response = self.request_handler.get(
+                'https://www.google.com/search',
+                params=params,
+                timeout=30
+            )
+            
+            if not response:
+                self.logger.error("Failed to get response from Google")
+                return []
+                
+            results = self._parse_search_results(response.text)
+            self.logger.info(f"Found {len(results)} results")
+            return results
+            
+        except Exception as e:
+            self.logger.error(f"Search error: {str(e)}")
+            return []
+            
     def _parse_search_results(self, html_content: str) -> List[Dict]:
-        """Parse Google search results page"""
+        """Parse Google search results page with sentiment analysis"""
         soup = BeautifulSoup(html_content, 'html.parser')
         results = []
-        
-        # Selectores para diferentes tipos de resultados
-        search_results = (
-            soup.select('div.g') or  # Resultados generales
-            soup.select('div.rc') or  # Resultados alternativos
-            soup.select('div[data-hveid]') or  # Resultados con data-hveid
-            soup.select('div.yuRUbf')  # Contenedor de resultados
-        )
-        
-        for result in search_results:
-            try:
-                # Intentar extraer título y link
-                title_elem = (
-                    result.select_one('h3') or
-                    result.select_one('.LC20lb') or
-                    result.select_one('.DKV0Md')
-                )
-                
-                link_elem = (
-                    result.select_one('a') or
-                    result.select_one('.yuRUbf > a')
-                )
-                
-                snippet_elem = (
-                    result.select_one('.VwiC3b') or
-                    result.select_one('.st') or
-                    result.select_one('.aCOpRe')
-                )
-                
-                if title_elem and link_elem:
-                    url = link_elem['href']
-                    if url.startswith(('http://', 'https://')):
-                        result_data = {
-                            'title': title_elem.get_text().strip(),
-                            'url': url,
-                            'snippet': snippet_elem.get_text().strip() if snippet_elem else '',
-                            'platform': self._identify_platform(url)
-                        }
-                        results.append(result_data)
-                        self.logger.debug(f"Parsed result: {result_data['title']}")
+        seen_urls = set()
+
+        main_content = soup.select_one('#main, #search, #rso')
+        if main_content:
+            search_results = main_content.select(
+                'div.g, div[data-sokoban-container], div.hlcw0c, div[data-header-feature="0"]'
+            )
+            
+            self.logger.debug(f"Found {len(search_results)} results in main container")
+            
+            for result in search_results:
+                try:
+                    # Extract and process result
+                    link_container = result.select_one('div.yuRUbf, div.egMi0')
+                    if not link_container:
+                        continue
                         
-            except Exception as e:
-                self.logger.error(f"Error parsing result: {e}")
-                continue
-                
+                    link_elem = link_container.select_one('a[href^="http"]')
+                    if not link_elem or link_elem['href'] in seen_urls:
+                        continue
+                        
+                    url = link_elem['href']
+                    seen_urls.add(url)
+                    
+                    title_elem = link_elem.select_one('h3')
+                    if not title_elem:
+                        continue
+                        
+                    snippet_container = result.select_one('div.VwiC3b, div.IsZvec')
+                    
+                    result_data = {
+                        'title': title_elem.get_text().strip(),
+                        'url': url,
+                        'snippet': snippet_container.get_text().strip() if snippet_container else '',
+                        'platform': self._identify_platform(url),
+                        **self.sentiment_analyzer.analyze_text(snippet_container.get_text().strip() if snippet_container else '')
+                    }
+                    results.append(result_data)
+                    self.logger.debug(f"Processed result: {title_elem.get_text().strip()[:50]}...")
+                    
+                except Exception as e:
+                    self.logger.error(f"Error processing result: {str(e)}")
+                    continue
+
+        self.logger.info(f"Parsing completed. {len(results)} valid results processed")
         return results
         
-    def search(self, keyword: str, date: str) -> List[Dict]:
-        """Perform Google search and return results"""
-        search_url = self._build_search_url(keyword, date)
-        if not search_url:
-            return []
-            
-        self.logger.info(f"Searching for: {keyword} on date: {date}")
-        self.logger.debug(f"Using URL: {search_url}")
-        
-        response = self.request_handler.get(search_url)
-        if not response:
-            self.logger.error("Failed to get response from Google")
-            return []
-            
-        self.logger.debug(f"Response status code: {response.status_code}")
-        self.logger.debug(f"Response headers: {response.headers}")
-        
-        results = self._parse_search_results(response.text)
-        self.logger.info(f"Found {len(results)} results")
-        
-        if len(results) == 0:
-            self.logger.debug("Response content: " + response.text[:500] + "...")
-            
-        return results 
+    def _determine_platform(self, url: str) -> str:
+        """Determine the platform type based on URL"""
+        # ... resto del código existente ... 

@@ -1,198 +1,85 @@
-2025-02-05 22:12:42,038 - __main__ - INFO - Searching for 'tech blogging tips' on 02/01/2024
-2025-02-05 22:12:42,038 - scrapers.google_scraper - DEBUG - Built search URL: https://www.google.com/search?q=tech+blogging+tips&num=10&hl=en&gl=us&as_qdr=all&source=lnt&tbs=cdr%3A1%2Ccd_min%3A02%2F01%2F2024%2Ccd_max%3A02%2F01%2F2024&safe=off&filter=0
-2025-02-05 22:12:42,038 - scrapers.google_scraper - INFO - Searching for: tech blogging tips on date: 02/01/2024
-2025-02-05 22:12:42,038 - scrapers.google_scraper - DEBUG - Using URL: https://www.google.com/search?q=tech+blogging+tips&num=10&hl=en&gl=us&as_qdr=all&source=lnt&tbs=cdr%3A1%2Ccd_min%3A02%2F01%2F2024%2Ccd_max%3A02%2F01%2F2024&safe=off&filter=0
-2025-02-05 22:12:42,038 - utils.request_handler - INFO - Iniciando Chrome...
-2025-02-05 22:12:42,071 - utils.request_handler - INFO - Versión de Chrome detectada: 132
-2025-02-05 22:12:42,071 - utils.request_handler - INFO - Iniciando Chrome con configuración optimizada...
-2025-02-05 22:12:42,071 - utils.request_handler - INFO - Usando chromedriver en: /opt/homebrew/bin/chromedriver
-2025-02-05 22:12:42,263 - selenium.webdriver.common.driver_finder - DEBUG - Skipping Selenium Manager; path to chrome driver specified in Service class: /opt/homebrew/bin/chromedriver
-2025-02-05 22:12:42,267 - selenium.webdriver.common.service - DEBUG - Started executable: `/opt/homebrew/bin/chromedriver` in a child process with pid: 98558 using 0 to output -3
-2025-02-05 22:12:42,461 - utils.request_handler - ERROR - Error iniciando Chrome: Message: Service /opt/homebrew/bin/chromedriver unexpectedly exited. Status code was: -9
-
-2025-02-05 22:12:42,461 - utils.request_handler - ERROR - Error en request (intento 1/3): Message: Service /opt/homebrew/bin/chromedriver unexpectedly exited. Status code was: -9
-
-2025-02-05 22:12:47,135 - utils.request_handler - INFO - Iniciando Chrome...
-2025-02-05 22:12:47,171 - utils.request_handler - INFO - Versión de Chrome detectada: 132
-2025-02-05 22:12:47,172 - utils.request_handler - INFO - Iniciando Chrome con configuración optimizada...
-2025-02-05 22:12:47,172 - utils.request_handler - INFO - Usando chromedriver en: /opt/homebrew/bin/chromedriver
-2025-02-05 22:12:47,369 - selenium.webdriver.common.driver_finder - DEBUG - Skipping Selenium Manager; path to chrome driver specified in Service class: /opt/homebrew/bin/chromedriver
-2025-02-05 22:12:47,372 - selenium.webdriver.common.service - DEBUG - Started executable: `/opt/homebrew/bin/chromedriver` in a child process with pid: 98582 using 0 to output -3
-2025-02-05 22:12:47,569 - utils.request_handler - ERROR - Error iniciando Chrome: Message: Service /opt/homebrew/bin/chromedriver unexpectedly exited. Status code was: -9
-
-2025-02-05 22:12:47,569 - utils.request_handler - ERROR - Error en request (intento 2/3): Message: Service /opt/homebrew/bin/chromedriver unexpectedly exited. Status code was: -9
-
-2025-02-05 22:12:53,341 - utils.request_handler - INFO - Iniciando Chrome...
-2025-02-05 22:12:53,399 - utils.request_handler - INFO - Versión de Chrome detectada: 132
-2025-02-05 22:12:53,400 - utils.request_handler - INFO - Iniciando Chrome con configuración optimizada...
-2025-02-05 22:12:53,400 - utils.request_handler - INFO - Usando chromedriver en: /opt/homebrew/bin/chromedriver
-2025-02-05 22:12:53,608 - selenium.webdriver.common.driver_finder - DEBUG - Skipping Selenium Manager; path to chrome driver specified in Service class: /opt/homebrew/bin/chromedriver
-2025-02-05 22:12:53,611 - selenium.webdriver.common.service - DEBUG - Started executable: `/opt/homebrew/bin/chromedriver` in a child process with pid: 98610 using 0 to output -3
-2025-02-05 22:12:53,803 - utils.request_handler - ERROR - Error iniciando Chrome: Message: Service /opt/homebrew/bin/chromedriver unexpectedly exited. Status code was: -9
-
-2025-02-05 22:12:53,803 - utils.request_handler - ERROR - Error en request (intento 3/3): Message: Service /opt/homebrew/bin/chromedriver unexpectedly exited. Status code was: -9
-
-2025-02-05 22:12:53,803 - scrapers.google_scraper - ERROR - Failed to get response from Google
-2025-02-05 22:12:53,803 - __main__ - WARNING - No search results found
-2025-02-05 22:12:53,804 - undetected_chromedriver.dprocess - DEBUG - cleaning up pid 98557 
-2025-02-05 22:12:53,804 - undetected_chromedriver.dprocess - DEBUG - cleaning up pid 98581 
-2025-02-05 22:12:53,804 - undetected_chromedriver.dprocess - DEBUG - cleaning up pid 98609 
-2025-02-05 22:15:48,831 - __main__ - INFO - Searching for 'tech blogging tips' on 02/01/2024
-2025-02-05 22:15:48,832 - scrapers.google_scraper - DEBUG - Built search URL: https://www.google.com/search?q=tech+blogging+tips&num=10&hl=en&gl=us&as_qdr=all&source=lnt&tbs=cdr%3A1%2Ccd_min%3A02%2F01%2F2024%2Ccd_max%3A02%2F01%2F2024&safe=off&filter=0
-2025-02-05 22:15:48,832 - scrapers.google_scraper - INFO - Searching for: tech blogging tips on date: 02/01/2024
-2025-02-05 22:15:48,832 - scrapers.google_scraper - DEBUG - Using URL: https://www.google.com/search?q=tech+blogging+tips&num=10&hl=en&gl=us&as_qdr=all&source=lnt&tbs=cdr%3A1%2Ccd_min%3A02%2F01%2F2024%2Ccd_max%3A02%2F01%2F2024&safe=off&filter=0
-2025-02-05 22:15:48,832 - utils.request_handler - INFO - Iniciando Chrome...
-2025-02-05 22:15:48,916 - utils.request_handler - INFO - Versión de Chrome detectada: 132
-2025-02-05 22:15:48,917 - utils.request_handler - INFO - Iniciando Chrome con configuración optimizada...
-2025-02-05 22:15:48,917 - undetected_chromedriver.patcher - DEBUG - getting release number from /latest-versions-per-milestone-with-downloads.json
-2025-02-05 22:21:06,190 - __main__ - INFO - Searching for 'tech blogging tips' on 02/01/2024
-2025-02-05 22:21:06,190 - scrapers.google_scraper - DEBUG - Built search URL: https://www.google.com/search?q=tech+blogging+tips&num=10&hl=en&gl=us&as_qdr=all&source=lnt&tbs=cdr%3A1%2Ccd_min%3A02%2F01%2F2024%2Ccd_max%3A02%2F01%2F2024&safe=off&filter=0
-2025-02-05 22:21:06,190 - scrapers.google_scraper - INFO - Searching for: tech blogging tips on date: 02/01/2024
-2025-02-05 22:21:06,190 - scrapers.google_scraper - DEBUG - Using URL: https://www.google.com/search?q=tech+blogging+tips&num=10&hl=en&gl=us&as_qdr=all&source=lnt&tbs=cdr%3A1%2Ccd_min%3A02%2F01%2F2024%2Ccd_max%3A02%2F01%2F2024&safe=off&filter=0
-2025-02-05 22:21:06,190 - utils.request_handler - INFO - Iniciando Chrome...
-2025-02-05 22:21:06,281 - utils.request_handler - INFO - Versión de Chrome detectada: 132
-2025-02-05 22:21:06,281 - utils.request_handler - INFO - Iniciando Chrome con configuración optimizada...
-2025-02-05 22:21:06,281 - undetected_chromedriver.patcher - DEBUG - getting release number from /latest-versions-per-milestone-with-downloads.json
-2025-02-05 22:21:57,268 - __main__ - INFO - Searching for 'tech tips' on 02/01/2024
-2025-02-05 22:21:57,268 - scrapers.google_scraper - DEBUG - Built search URL: https://www.google.com/search?q=tech+tips&num=10&hl=en&gl=us&as_qdr=all&source=lnt&tbs=cdr%3A1%2Ccd_min%3A02%2F01%2F2024%2Ccd_max%3A02%2F01%2F2024&safe=off&filter=0
-2025-02-05 22:21:57,268 - scrapers.google_scraper - INFO - Searching for: tech tips on date: 02/01/2024
-2025-02-05 22:21:57,268 - scrapers.google_scraper - DEBUG - Using URL: https://www.google.com/search?q=tech+tips&num=10&hl=en&gl=us&as_qdr=all&source=lnt&tbs=cdr%3A1%2Ccd_min%3A02%2F01%2F2024%2Ccd_max%3A02%2F01%2F2024&safe=off&filter=0
-2025-02-05 22:21:57,268 - utils.request_handler - INFO - Iniciando Chrome...
-2025-02-05 22:21:57,362 - utils.request_handler - INFO - Versión de Chrome detectada: 132
-2025-02-05 22:21:57,363 - utils.request_handler - INFO - Iniciando Chrome con configuración optimizada...
-2025-02-05 22:21:57,363 - undetected_chromedriver.patcher - DEBUG - getting release number from /latest-versions-per-milestone-with-downloads.json
-2025-02-05 22:22:03,644 - __main__ - INFO - Searching for 'tech tips' on 02/01/2024
-2025-02-05 22:22:03,644 - scrapers.google_scraper - DEBUG - Built search URL: https://www.google.com/search?q=tech+tips&num=10&hl=en&gl=us&as_qdr=all&source=lnt&tbs=cdr%3A1%2Ccd_min%3A02%2F01%2F2024%2Ccd_max%3A02%2F01%2F2024&safe=off&filter=0
-2025-02-05 22:22:03,644 - scrapers.google_scraper - INFO - Searching for: tech tips on date: 02/01/2024
-2025-02-05 22:22:03,644 - scrapers.google_scraper - DEBUG - Using URL: https://www.google.com/search?q=tech+tips&num=10&hl=en&gl=us&as_qdr=all&source=lnt&tbs=cdr%3A1%2Ccd_min%3A02%2F01%2F2024%2Ccd_max%3A02%2F01%2F2024&safe=off&filter=0
-2025-02-05 22:22:03,644 - utils.request_handler - INFO - Iniciando Chrome...
-2025-02-05 22:22:03,675 - utils.request_handler - INFO - Versión de Chrome detectada: 132
-2025-02-05 22:22:03,676 - utils.request_handler - INFO - Iniciando Chrome con configuración optimizada...
-2025-02-05 22:22:03,676 - undetected_chromedriver.patcher - DEBUG - getting release number from /latest-versions-per-milestone-with-downloads.json
-2025-02-05 22:22:06,241 - __main__ - INFO - Searching for 'tech blogging tips' on 02/01/2024
-2025-02-05 22:22:06,241 - scrapers.google_scraper - DEBUG - Built search URL: https://www.google.com/search?q=tech+blogging+tips&num=10&hl=en&gl=us&as_qdr=all&source=lnt&tbs=cdr%3A1%2Ccd_min%3A02%2F01%2F2024%2Ccd_max%3A02%2F01%2F2024&safe=off&filter=0
-2025-02-05 22:22:06,241 - scrapers.google_scraper - INFO - Searching for: tech blogging tips on date: 02/01/2024
-2025-02-05 22:22:06,241 - scrapers.google_scraper - DEBUG - Using URL: https://www.google.com/search?q=tech+blogging+tips&num=10&hl=en&gl=us&as_qdr=all&source=lnt&tbs=cdr%3A1%2Ccd_min%3A02%2F01%2F2024%2Ccd_max%3A02%2F01%2F2024&safe=off&filter=0
-2025-02-05 22:22:06,241 - utils.request_handler - INFO - Iniciando Chrome...
-2025-02-05 22:22:06,298 - utils.request_handler - INFO - Versión de Chrome detectada: 132
-2025-02-05 22:22:06,299 - utils.request_handler - INFO - Iniciando Chrome con configuración optimizada...
-2025-02-05 22:22:06,299 - undetected_chromedriver.patcher - DEBUG - getting release number from /latest-versions-per-milestone-with-downloads.json
-2025-02-05 22:23:08,681 - __main__ - INFO - Searching for 'tech blogging tips' on 02/01/2024
-2025-02-05 22:23:08,681 - scrapers.google_scraper - DEBUG - Built search URL: https://www.google.com/search?q=tech+blogging+tips&num=10&hl=en&gl=us&as_qdr=all&source=lnt&tbs=cdr%3A1%2Ccd_min%3A02%2F01%2F2024%2Ccd_max%3A02%2F01%2F2024&safe=off&filter=0
-2025-02-05 22:23:08,681 - scrapers.google_scraper - INFO - Searching for: tech blogging tips on date: 02/01/2024
-2025-02-05 22:23:08,681 - scrapers.google_scraper - DEBUG - Using URL: https://www.google.com/search?q=tech+blogging+tips&num=10&hl=en&gl=us&as_qdr=all&source=lnt&tbs=cdr%3A1%2Ccd_min%3A02%2F01%2F2024%2Ccd_max%3A02%2F01%2F2024&safe=off&filter=0
-2025-02-05 22:23:08,681 - utils.request_handler - INFO - Iniciando Chrome...
-2025-02-05 22:23:08,681 - WDM - INFO - ====== WebDriver manager ======
-2025-02-05 22:23:08,841 - WDM - INFO - Get LATEST chromedriver version for google-chrome
-2025-02-05 22:23:08,847 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): googlechromelabs.github.io:443
-2025-02-05 22:24:41,278 - __main__ - INFO - Searching for 'tech blogging tips' on 02/01/2024
-2025-02-05 22:24:41,279 - scrapers.google_scraper - DEBUG - Built search URL: https://www.google.com/search?q=tech+blogging+tips&num=10&hl=en&gl=us&as_qdr=all&source=lnt&tbs=cdr%3A1%2Ccd_min%3A02%2F01%2F2024%2Ccd_max%3A02%2F01%2F2024&safe=off&filter=0
-2025-02-05 22:24:41,279 - scrapers.google_scraper - INFO - Searching for: tech blogging tips on date: 02/01/2024
-2025-02-05 22:24:41,279 - scrapers.google_scraper - DEBUG - Using URL: https://www.google.com/search?q=tech+blogging+tips&num=10&hl=en&gl=us&as_qdr=all&source=lnt&tbs=cdr%3A1%2Ccd_min%3A02%2F01%2F2024%2Ccd_max%3A02%2F01%2F2024&safe=off&filter=0
-2025-02-05 22:24:41,279 - utils.request_handler - INFO - Iniciando Chrome...
-2025-02-05 22:24:41,279 - selenium.webdriver.common.driver_finder - DEBUG - Skipping Selenium Manager; path to chrome driver specified in Service class: /opt/homebrew/bin/chromedriver
-2025-02-05 22:24:41,281 - selenium.webdriver.common.service - DEBUG - Started executable: `/opt/homebrew/bin/chromedriver` in a child process with pid: 4473 using 0 to output -3
-2025-02-05 22:25:14,006 - utils.request_handler - ERROR - Error iniciando Chrome: Message: Can not connect to the Service /opt/homebrew/bin/chromedriver
-
-2025-02-05 22:25:14,008 - utils.request_handler - ERROR - Error en request (intento 1/3): Message: Can not connect to the Service /opt/homebrew/bin/chromedriver
-
-2025-02-05 22:25:29,020 - __main__ - INFO - Searching for 'tech blogging tips' on 02/01/2024
-2025-02-05 22:25:29,020 - scrapers.google_scraper - DEBUG - Built search URL: https://www.google.com/search?q=tech+blogging+tips&num=10&hl=en&gl=us&as_qdr=all&source=lnt&tbs=cdr%3A1%2Ccd_min%3A02%2F01%2F2024%2Ccd_max%3A02%2F01%2F2024&safe=off&filter=0
-2025-02-05 22:25:29,020 - scrapers.google_scraper - INFO - Searching for: tech blogging tips on date: 02/01/2024
-2025-02-05 22:25:29,020 - scrapers.google_scraper - DEBUG - Using URL: https://www.google.com/search?q=tech+blogging+tips&num=10&hl=en&gl=us&as_qdr=all&source=lnt&tbs=cdr%3A1%2Ccd_min%3A02%2F01%2F2024%2Ccd_max%3A02%2F01%2F2024&safe=off&filter=0
-2025-02-05 22:25:29,020 - utils.request_handler - INFO - Iniciando Chrome...
-2025-02-05 22:25:29,020 - utils.request_handler - INFO - Iniciando Chrome con configuración optimizada...
-2025-02-05 22:25:29,020 - selenium.webdriver.common.driver_finder - DEBUG - Skipping Selenium Manager; path to chrome driver specified in Service class: /opt/homebrew/bin/chromedriver
-2025-02-05 22:25:29,022 - selenium.webdriver.common.service - DEBUG - Started executable: `/opt/homebrew/bin/chromedriver` in a child process with pid: 4869 using 0 to output -3
-2025-02-05 22:26:01,755 - utils.request_handler - ERROR - Error iniciando Chrome: Message: Can not connect to the Service /opt/homebrew/bin/chromedriver
-
-2025-02-05 22:26:01,755 - utils.request_handler - ERROR - Error en request (intento 1/3): Message: Can not connect to the Service /opt/homebrew/bin/chromedriver
-
-2025-02-05 22:26:21,724 - utils.request_handler - INFO - Iniciando Chrome...
-2025-02-05 22:26:21,724 - utils.request_handler - INFO - Iniciando Chrome con configuración optimizada...
-2025-02-05 22:26:21,725 - selenium.webdriver.common.driver_finder - DEBUG - Skipping Selenium Manager; path to chrome driver specified in Service class: /opt/homebrew/bin/chromedriver
-2025-02-05 22:26:21,730 - selenium.webdriver.common.service - DEBUG - Started executable: `/opt/homebrew/bin/chromedriver` in a child process with pid: 5305 using 0 to output -3
-2025-02-05 22:27:47,650 - __main__ - INFO - Searching for 'tech blogging tips' on 02/01/2024
-2025-02-05 22:27:47,650 - scrapers.google_scraper - DEBUG - Built search URL: https://www.google.com/search?q=tech+blogging+tips&num=10&hl=en&gl=us&as_qdr=all&source=lnt&tbs=cdr%3A1%2Ccd_min%3A02%2F01%2F2024%2Ccd_max%3A02%2F01%2F2024&safe=off&filter=0
-2025-02-05 22:27:47,650 - scrapers.google_scraper - INFO - Searching for: tech blogging tips on date: 02/01/2024
-2025-02-05 22:27:47,650 - scrapers.google_scraper - DEBUG - Using URL: https://www.google.com/search?q=tech+blogging+tips&num=10&hl=en&gl=us&as_qdr=all&source=lnt&tbs=cdr%3A1%2Ccd_min%3A02%2F01%2F2024%2Ccd_max%3A02%2F01%2F2024&safe=off&filter=0
-2025-02-05 22:27:47,650 - utils.request_handler - INFO - Iniciando Chrome...
-2025-02-05 22:27:47,650 - undetected_chromedriver.patcher - DEBUG - getting release number from /last-known-good-versions-with-downloads.json
-2025-02-05 22:28:56,054 - __main__ - INFO - Searching for 'tech blogging tips' on 02/01/2024
-2025-02-05 22:28:56,054 - scrapers.google_scraper - DEBUG - Built search URL: https://www.google.com/search?q=tech+blogging+tips&num=10&hl=en&gl=us&as_qdr=all&source=lnt&tbs=cdr%3A1%2Ccd_min%3A02%2F01%2F2024%2Ccd_max%3A02%2F01%2F2024&safe=off&filter=0
-2025-02-05 22:28:56,054 - scrapers.google_scraper - INFO - Searching for: tech blogging tips on date: 02/01/2024
-2025-02-05 22:28:56,054 - scrapers.google_scraper - DEBUG - Using URL: https://www.google.com/search?q=tech+blogging+tips&num=10&hl=en&gl=us&as_qdr=all&source=lnt&tbs=cdr%3A1%2Ccd_min%3A02%2F01%2F2024%2Ccd_max%3A02%2F01%2F2024&safe=off&filter=0
-2025-02-05 22:28:56,054 - utils.request_handler - INFO - Iniciando Chrome...
-2025-02-05 22:28:56,100 - utils.request_handler - INFO - Versión de Chrome detectada: 132
-2025-02-05 22:28:56,100 - undetected_chromedriver.patcher - DEBUG - getting release number from /latest-versions-per-milestone-with-downloads.json
-2025-02-05 23:32:18,901 - undetected_chromedriver.patcher - DEBUG - downloading from https://storage.googleapis.com/chrome-for-testing-public/132.0.6834.159/mac-x64/chromedriver-mac-x64.zip
-2025-02-05 23:32:19,625 - undetected_chromedriver.patcher - DEBUG - unzipping /var/folders/cm/rl613v612txg9qrs_6_nb5br0000gn/T/tmp1u3iqcxn
-2025-02-05 23:32:19,689 - undetected_chromedriver.patcher - INFO - patching driver executable /Users/agustinbustamante/Library/Application Support/undetected_chromedriver/undetected_chromedriver
-2025-02-05 23:32:19,703 - undetected_chromedriver.patcher - DEBUG - found block:
-b'{window.cdc_adoQpoasnfa76pfcZLmcfl_Array = window.Array;window.cdc_adoQpoasnfa76pfcZLmcfl_Object = window.Object;window.cdc_adoQpoasnfa76pfcZLmcfl_Promise = window.Promise;window.cdc_adoQpoasnfa76pfcZLmcfl_Proxy = window.Proxy;window.cdc_adoQpoasnfa76pfcZLmcfl_Symbol = window.Symbol;window.cdc_adoQpoasnfa76pfcZLmcfl_JSON = window.JSON;window.cdc_adoQpoasnfa76pfcZLmcfl_Window = window.Window;}'
-replacing with:
-b'{console.log("undetected chromedriver 1337!")}                                                                                                                                                                                                                                                                                                                                                             '
-2025-02-05 23:32:19,706 - undetected_chromedriver.patcher - DEBUG - patching took us 0.02 seconds
-2025-02-06 00:35:11,534 - __main__ - INFO - Searching for 'tech blogging tips' on 02/01/2024
-2025-02-06 00:35:11,534 - scrapers.google_scraper - DEBUG - Built search URL: https://www.google.com/search?q=tech+blogging+tips&num=10&hl=en&gl=us&as_qdr=all&source=lnt&tbs=cdr%3A1%2Ccd_min%3A02%2F01%2F2024%2Ccd_max%3A02%2F01%2F2024&safe=off&filter=0
-2025-02-06 00:35:11,534 - scrapers.google_scraper - INFO - Searching for: tech blogging tips on date: 02/01/2024
-2025-02-06 00:35:11,534 - scrapers.google_scraper - DEBUG - Using URL: https://www.google.com/search?q=tech+blogging+tips&num=10&hl=en&gl=us&as_qdr=all&source=lnt&tbs=cdr%3A1%2Ccd_min%3A02%2F01%2F2024%2Ccd_max%3A02%2F01%2F2024&safe=off&filter=0
-2025-02-06 00:35:11,534 - utils.request_handler - INFO - Iniciando navegador...
-2025-02-06 00:35:11,534 - asyncio - DEBUG - Using selector: KqueueSelector
-2025-02-06 00:35:13,267 - utils.request_handler - ERROR - Error iniciando navegador: BrowserType.launch: Executable doesn't exist at /Users/agustinbustamante/Library/Caches/ms-playwright/chromium_headless_shell-1155/chrome-mac/headless_shell
-╔════════════════════════════════════════════════════════════╗
-║ Looks like Playwright was just installed or updated.       ║
-║ Please run the following command to download new browsers: ║
-║                                                            ║
-║     playwright install                                     ║
-║                                                            ║
-║ <3 Playwright Team                                         ║
-╚════════════════════════════════════════════════════════════╝
-2025-02-06 00:35:13,267 - utils.request_handler - ERROR - Error en request (intento 1/3): BrowserType.launch: Executable doesn't exist at /Users/agustinbustamante/Library/Caches/ms-playwright/chromium_headless_shell-1155/chrome-mac/headless_shell
-╔════════════════════════════════════════════════════════════╗
-║ Looks like Playwright was just installed or updated.       ║
-║ Please run the following command to download new browsers: ║
-║                                                            ║
-║     playwright install                                     ║
-║                                                            ║
-║ <3 Playwright Team                                         ║
-╚════════════════════════════════════════════════════════════╝
-2025-02-06 00:35:53,116 - __main__ - INFO - Searching for 'tech blogging tips' on 02/01/2024
-2025-02-06 00:35:53,116 - scrapers.google_scraper - DEBUG - Built search URL: https://www.google.com/search?q=tech+blogging+tips&num=10&hl=en&gl=us&as_qdr=all&source=lnt&tbs=cdr%3A1%2Ccd_min%3A02%2F01%2F2024%2Ccd_max%3A02%2F01%2F2024&safe=off&filter=0
-2025-02-06 00:35:53,116 - scrapers.google_scraper - INFO - Searching for: tech blogging tips on date: 02/01/2024
-2025-02-06 00:35:53,116 - scrapers.google_scraper - DEBUG - Using URL: https://www.google.com/search?q=tech+blogging+tips&num=10&hl=en&gl=us&as_qdr=all&source=lnt&tbs=cdr%3A1%2Ccd_min%3A02%2F01%2F2024%2Ccd_max%3A02%2F01%2F2024&safe=off&filter=0
-2025-02-06 00:35:53,116 - utils.request_handler - INFO - Iniciando navegador...
-2025-02-06 00:35:53,116 - asyncio - DEBUG - Using selector: KqueueSelector
-2025-02-06 00:35:55,662 - utils.request_handler - INFO - Navegador iniciado correctamente
-2025-02-06 00:35:55,662 - utils.request_handler - DEBUG - Waiting 2.99 seconds before request
-2025-02-06 00:35:58,658 - utils.request_handler - DEBUG - Requesting URL: https://www.google.com/search?q=tech+blogging+tips&num=10&hl=en&gl=us&as_qdr=all&source=lnt&tbs=cdr%3A1%2Ccd_min%3A02%2F01%2F2024%2Ccd_max%3A02%2F01%2F2024&safe=off&filter=0
-2025-02-06 00:36:00,701 - scrapers.google_scraper - DEBUG - Response status code: 200
-2025-02-06 00:36:00,702 - scrapers.google_scraper - DEBUG - Response headers: {'accept-ch': 'Sec-CH-Prefers-Color-Scheme\nDownlink\nRTT\nSec-CH-UA-Form-Factors\nSec-CH-UA-Platform\nSec-CH-UA-Platform-Version\nSec-CH-UA-Full-Version\nSec-CH-UA-Arch\nSec-CH-UA-Model\nSec-CH-UA-Bitness\nSec-CH-UA-Full-Version-List\nSec-CH-UA-WoW64', 'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'cache-control': 'private', 'content-encoding': 'br', 'content-security-policy': "object-src 'none';base-uri 'self';script-src 'nonce-wWLlRRC3mV1hMR00FmXH5w' 'strict-dynamic' 'report-sample' 'unsafe-eval' 'unsafe-inline' https: http:;report-uri https://csp.withgoogle.com/csp/gws/cdt1", 'content-type': 'text/html; charset=UTF-8', 'cross-origin-opener-policy': 'same-origin-allow-popups; report-to="gws"', 'date': 'Thu, 06 Feb 2025 03:35:58 GMT', 'expires': 'Thu, 06 Feb 2025 03:35:58 GMT', 'p3p': 'CP="This is not a P3P policy! See g.co/p3phelp for more info."', 'permissions-policy': 'unload=()', 'report-to': '{"group":"gws","max_age":2592000,"endpoints":[{"url":"https://csp.withgoogle.com/csp/report-to/gws/cdt1"}]}', 'server': 'gws', 'strict-transport-security': 'max-age=31536000', 'x-frame-options': 'SAMEORIGIN', 'x-xss-protection': '0'}
-2025-02-06 00:36:00,704 - scrapers.google_scraper - INFO - Found 0 results
-2025-02-06 00:36:00,704 - scrapers.google_scraper - DEBUG - Response content: <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"><html><head><meta http-equiv="origin-trial" content="A/kargTFyk8MR5ueravczef/wIlTkbVk1qXQesp39nV+xNECPdLBVeYffxrM8TmZT6RArWGQVCJ0LRivD7glcAUAAACQeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZS5jb206NDQzIiwiZmVhdHVyZSI6IkRpc2FibGVUaGlyZFBhcnR5U3RvcmFnZVBhcnRpdGlvbmluZzIiLCJleHBpcnkiOjE3NDIzNDIzOTksImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta name="viewport" content="...
-2025-02-06 00:36:00,704 - __main__ - WARNING - No search results found
-2025-02-06 00:37:09,937 - __main__ - INFO - Searching for 'tech blogging tips' on 02/01/2024
-2025-02-06 00:37:09,937 - scrapers.google_scraper - DEBUG - Built search URL: https://www.google.com/search?q=tech+blogging+tips&num=10&hl=en&gl=us&as_qdr=all&source=lnt&tbs=cdr%3A1%2Ccd_min%3A02%2F01%2F2024%2Ccd_max%3A02%2F01%2F2024&safe=off&filter=0
-2025-02-06 00:37:09,937 - scrapers.google_scraper - INFO - Searching for: tech blogging tips on date: 02/01/2024
-2025-02-06 00:37:09,937 - scrapers.google_scraper - DEBUG - Using URL: https://www.google.com/search?q=tech+blogging+tips&num=10&hl=en&gl=us&as_qdr=all&source=lnt&tbs=cdr%3A1%2Ccd_min%3A02%2F01%2F2024%2Ccd_max%3A02%2F01%2F2024&safe=off&filter=0
-2025-02-06 00:37:09,937 - utils.request_handler - INFO - Iniciando navegador...
-2025-02-06 00:37:09,937 - asyncio - DEBUG - Using selector: KqueueSelector
-2025-02-06 00:37:10,530 - utils.request_handler - INFO - Navegador iniciado correctamente
-2025-02-06 00:37:10,530 - utils.request_handler - DEBUG - Waiting 3.09 seconds before request
-2025-02-06 00:37:13,625 - utils.request_handler - DEBUG - Requesting URL: https://www.google.com/search?q=tech+blogging+tips&num=10&hl=en&gl=us&as_qdr=all&source=lnt&tbs=cdr%3A1%2Ccd_min%3A02%2F01%2F2024%2Ccd_max%3A02%2F01%2F2024&safe=off&filter=0
-2025-02-06 00:37:22,659 - scrapers.google_scraper - DEBUG - Response status code: 200
-2025-02-06 00:37:22,659 - scrapers.google_scraper - DEBUG - Response headers: {'accept-ch': 'Sec-CH-Prefers-Color-Scheme\nDownlink\nRTT\nSec-CH-UA-Form-Factors\nSec-CH-UA-Platform\nSec-CH-UA-Platform-Version\nSec-CH-UA-Full-Version\nSec-CH-UA-Arch\nSec-CH-UA-Model\nSec-CH-UA-Bitness\nSec-CH-UA-Full-Version-List\nSec-CH-UA-WoW64', 'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'content-encoding': 'br', 'content-security-policy': "object-src 'none';base-uri 'self';script-src 'nonce-UY4J8FcBrIr6DC62iVrwlw' 'strict-dynamic' 'report-sample' 'unsafe-eval' 'unsafe-inline' https: http:;report-uri https://csp.withgoogle.com/csp/gws/cdt1", 'content-type': 'text/html; charset=UTF-8', 'cross-origin-opener-policy': 'same-origin-allow-popups; report-to="gws"', 'date': 'Thu, 06 Feb 2025 03:37:17 GMT', 'permissions-policy': 'unload=()', 'report-to': '{"group":"gws","max_age":2592000,"endpoints":[{"url":"https://csp.withgoogle.com/csp/report-to/gws/cdt1"}]}', 'server': 'gws', 'strict-transport-security': 'max-age=31536000', 'x-frame-options': 'SAMEORIGIN', 'x-xss-protection': '0'}
-2025-02-06 00:37:22,689 - scrapers.google_scraper - DEBUG - Parsed result: Blog UX best practices and mistakes to avoid
-2025-02-06 00:37:22,689 - scrapers.google_scraper - DEBUG - Parsed result: Top 5 Trending IT Blog Topic Ideas To Write About [With ...
-2025-02-06 00:37:22,689 - scrapers.google_scraper - DEBUG - Parsed result: 9 Of The Best Blog Layout Practices
-2025-02-06 00:37:22,690 - scrapers.google_scraper - DEBUG - Parsed result: Notes on How to Write a Blog
-2025-02-06 00:37:22,690 - scrapers.google_scraper - DEBUG - Parsed result: 10+ Tools for Writing Better Blog Posts in 2024
-2025-02-06 00:37:22,690 - scrapers.google_scraper - DEBUG - Parsed result: 22 Blog Examples: Top Successful Blogs (to Learn From) ...
-2025-02-06 00:37:22,690 - scrapers.google_scraper - DEBUG - Parsed result: Structuring the Perfect Recipe Blog Post
-2025-02-06 00:37:22,691 - scrapers.google_scraper - DEBUG - Parsed result: 15 best email marketing blogs you should be reading in 2024
-2025-02-06 00:37:22,691 - scrapers.google_scraper - DEBUG - Parsed result: 30 Inspiring Lifestyle Blog Examples in 2025
-2025-02-06 00:37:22,691 - scrapers.google_scraper - DEBUG - Parsed result: How to Design a Media Kit for Your Blog (Free Canva ...
-2025-02-06 00:37:22,691 - scrapers.google_scraper - INFO - Found 10 results
-2025-02-06 00:37:22,691 - __main__ - INFO - Extracting detailed content from search results
-2025-02-06 00:37:22,700 - pipelines.data_pipeline - INFO - Results saved to data/processed/tech blogging tips_02-01-2024.json
-2025-02-06 00:37:22,700 - __main__ - INFO - Results saved to data/processed/tech blogging tips_02-01-2024.json
+2025-02-07 16:50:42,922 - __main__ - INFO - Starting Google Search Scraper...
+2025-02-07 16:50:42,922 - utils.initialize_nltk - INFO - NLTK initialization skipped - using TextBlob only
+2025-02-07 16:50:42,922 - __main__ - INFO - Search parameters: keyword='python tutorial', date='02/10/2024'
+2025-02-07 16:50:42,925 - scrapers.google_scraper - INFO - Searching for: python tutorial (date: 02/10/2024)
+2025-02-07 16:50:42,925 - asyncio - DEBUG - Using selector: KqueueSelector
+2025-02-07 16:50:43,531 - utils.request_handler - INFO - Initializing search session...
+2025-02-07 16:50:48,614 - utils.request_handler - ERROR - Request error: name 'query_params' is not defined
+2025-02-07 16:50:48,614 - scrapers.google_scraper - ERROR - Failed to get response from Google
+2025-02-07 16:50:48,614 - __main__ - WARNING - No results found
+2025-02-07 16:51:06,949 - __main__ - INFO - Starting Google Search Scraper...
+2025-02-07 16:51:06,949 - utils.initialize_nltk - INFO - NLTK initialization skipped - using TextBlob only
+2025-02-07 16:51:06,950 - __main__ - INFO - Search parameters: keyword='python tutorial', date='02/10/2024'
+2025-02-07 16:51:06,952 - scrapers.google_scraper - INFO - Searching for: python tutorial (date: 02/10/2024)
+2025-02-07 16:51:06,952 - asyncio - DEBUG - Using selector: KqueueSelector
+2025-02-07 16:51:07,271 - utils.request_handler - INFO - Initializing search session...
+2025-02-07 16:51:11,841 - utils.request_handler - ERROR - Request error: name 'query_params' is not defined
+2025-02-07 16:51:11,841 - scrapers.google_scraper - ERROR - Failed to get response from Google
+2025-02-07 16:51:11,841 - __main__ - WARNING - No results found
+2025-02-07 16:51:37,755 - __main__ - INFO - Starting Google Search Scraper...
+2025-02-07 16:51:37,755 - utils.initialize_nltk - INFO - NLTK initialization skipped - using TextBlob only
+2025-02-07 16:51:37,755 - __main__ - INFO - Search parameters: keyword='python tutorial', date='02/10/2024'
+2025-02-07 16:51:37,757 - scrapers.google_scraper - INFO - Searching for: python tutorial (date: 02/10/2024)
+2025-02-07 16:51:37,757 - asyncio - DEBUG - Using selector: KqueueSelector
+2025-02-07 16:51:38,079 - utils.request_handler - INFO - Initializing search session...
+2025-02-07 16:51:45,951 - scrapers.google_scraper - INFO - Iniciando parseo de resultados
+2025-02-07 16:51:46,030 - scrapers.google_scraper - DEBUG - Encontrados 16 resultados en contenedor principal
+2025-02-07 16:51:46,046 - scrapers.google_scraper - DEBUG - Procesado resultado: The Python Tutorial — Python 3.13.2 documentation...
+2025-02-07 16:51:46,047 - scrapers.google_scraper - DEBUG - Procesado resultado: Python Tutorial...
+2025-02-07 16:51:46,048 - scrapers.google_scraper - DEBUG - Procesado resultado: Python Tutorial | Learn Python Programming Languag...
+2025-02-07 16:51:46,048 - scrapers.google_scraper - DEBUG - Procesado resultado: Learn Python - Free Interactive Python Tutorial...
+2025-02-07 16:51:46,048 - scrapers.google_scraper - DEBUG - Procesado resultado: Python Tutorial: Learn Python Programming...
+2025-02-07 16:51:46,049 - scrapers.google_scraper - DEBUG - Procesado resultado: Python Tutorials...
+2025-02-07 16:51:46,049 - scrapers.google_scraper - DEBUG - Procesado resultado: Python Tutorial...
+2025-02-07 16:51:46,049 - scrapers.google_scraper - DEBUG - Procesado resultado: How Long Does it Take to Learn Python? (+ Tips for...
+2025-02-07 16:51:46,050 - scrapers.google_scraper - DEBUG - Procesado resultado: Is Python an easy language to learn? - Quora...
+2025-02-07 16:51:46,050 - scrapers.google_scraper - DEBUG - Procesado resultado: Learn Python in 20 days for FREE - Medium...
+2025-02-07 16:51:46,050 - scrapers.google_scraper - DEBUG - Procesado resultado: Is 30 Too Old to Learn Python? - Noble Desktop...
+2025-02-07 16:51:46,051 - scrapers.google_scraper - DEBUG - Procesado resultado: Real Python: Python Tutorials...
+2025-02-07 16:51:46,051 - scrapers.google_scraper - INFO - Parseo completado. Procesados 12 resultados válidos
+2025-02-07 16:51:46,051 - scrapers.google_scraper - INFO - Found 12 results
+2025-02-07 16:51:46,052 - __main__ - INFO - Saved 12 results to data/processed
+2025-02-07 16:52:33,935 - __main__ - INFO - Starting Google Search Scraper...
+2025-02-07 16:52:33,935 - utils.initialize_nltk - INFO - NLTK initialization skipped - using TextBlob only
+2025-02-07 16:52:33,935 - __main__ - INFO - Search parameters: keyword='python tutorial', date='02/10/2024'
+2025-02-07 16:52:33,937 - scrapers.google_scraper - INFO - Searching for: python tutorial (date: 02/10/2024)
+2025-02-07 16:52:33,937 - asyncio - DEBUG - Using selector: KqueueSelector
+2025-02-07 16:52:34,276 - utils.request_handler - INFO - Initializing search session...
+2025-02-07 16:52:41,655 - scrapers.google_scraper - DEBUG - Found 16 results in main container
+2025-02-07 16:52:41,671 - scrapers.google_scraper - DEBUG - Processed result: The Python Tutorial — Python 3.13.2 documentation...
+2025-02-07 16:52:41,672 - scrapers.google_scraper - DEBUG - Processed result: Python Tutorial...
+2025-02-07 16:52:41,672 - scrapers.google_scraper - DEBUG - Processed result: Python Tutorial | Learn Python Programming Languag...
+2025-02-07 16:52:41,673 - scrapers.google_scraper - DEBUG - Processed result: Python Tutorial: Learn Python Programming...
+2025-02-07 16:52:41,673 - scrapers.google_scraper - DEBUG - Processed result: Learn Python - Free Interactive Python Tutorial...
+2025-02-07 16:52:41,674 - scrapers.google_scraper - DEBUG - Processed result: Python Tutorial...
+2025-02-07 16:52:41,674 - scrapers.google_scraper - DEBUG - Processed result: Python For Beginners...
+2025-02-07 16:52:41,674 - scrapers.google_scraper - DEBUG - Processed result: Can I learn Python by myself? - Quora...
+2025-02-07 16:52:41,674 - scrapers.google_scraper - DEBUG - Processed result: How Long Does it Take to Learn Python? (+ Tips for...
+2025-02-07 16:52:41,675 - scrapers.google_scraper - DEBUG - Processed result: Best Python Courses & Certificates [2025] | Course...
+2025-02-07 16:52:41,675 - scrapers.google_scraper - DEBUG - Processed result: Is Python an easy language to learn? - Quora...
+2025-02-07 16:52:41,675 - scrapers.google_scraper - DEBUG - Processed result: Python Tutorials...
+2025-02-07 16:52:41,675 - scrapers.google_scraper - INFO - Parsing completed. 12 valid results processed
+2025-02-07 16:52:41,675 - scrapers.google_scraper - INFO - Found 12 results
+2025-02-07 16:52:41,676 - __main__ - INFO - Saved 12 results to data/processed
+2025-02-07 16:54:43,511 - __main__ - INFO - Starting Google Search Scraper...
+2025-02-07 16:54:43,511 - utils.initialize_nltk - INFO - NLTK initialization skipped - using TextBlob only
+2025-02-07 16:54:43,512 - __main__ - INFO - Search parameters: keyword='python tutorial', date='02/10/2024'
+2025-02-07 16:54:43,514 - scrapers.google_scraper - INFO - Searching for: python tutorial (date: 02/10/2024)
+2025-02-07 16:54:43,514 - asyncio - DEBUG - Using selector: KqueueSelector
+2025-02-07 16:54:43,843 - utils.request_handler - INFO - Initializing search session...
+2025-02-07 16:54:51,802 - scrapers.google_scraper - DEBUG - Found 16 results in main container
+2025-02-07 16:54:51,819 - scrapers.google_scraper - DEBUG - Processed result: The Python Tutorial — Python 3.13.2 documentation...
+2025-02-07 16:54:51,819 - scrapers.google_scraper - DEBUG - Processed result: Python Tutorial...
+2025-02-07 16:54:51,820 - scrapers.google_scraper - DEBUG - Processed result: Python Tutorial | Learn Python Programming Languag...
+2025-02-07 16:54:51,820 - scrapers.google_scraper - DEBUG - Processed result: Learn Python - Free Interactive Python Tutorial...
+2025-02-07 16:54:51,821 - scrapers.google_scraper - DEBUG - Processed result: Python Tutorial: Learn Python Programming...
+2025-02-07 16:54:51,821 - scrapers.google_scraper - DEBUG - Processed result: Python Tutorials...
+2025-02-07 16:54:51,822 - scrapers.google_scraper - DEBUG - Processed result: Python Tutorial...
+2025-02-07 16:54:51,822 - scrapers.google_scraper - DEBUG - Processed result: Can I learn Python by myself? - Quora...
+2025-02-07 16:54:51,822 - scrapers.google_scraper - DEBUG - Processed result: How Long Does it Take to Learn Python? (+ Tips for...
+2025-02-07 16:54:51,822 - scrapers.google_scraper - DEBUG - Processed result: Best Python Courses & Certificates [2025] | Course...
+2025-02-07 16:54:51,823 - scrapers.google_scraper - DEBUG - Processed result: Is Python an easy language to learn? - Quora...
+2025-02-07 16:54:51,823 - scrapers.google_scraper - DEBUG - Processed result: Real Python: Python Tutorials...
+2025-02-07 16:54:51,823 - scrapers.google_scraper - INFO - Parsing completed. 12 valid results processed
+2025-02-07 16:54:51,823 - scrapers.google_scraper - INFO - Found 12 results
+2025-02-07 16:54:51,824 - __main__ - INFO - Saved 12 results to data/processed

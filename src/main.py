@@ -2,6 +2,9 @@ import argparse
 from datetime import datetime
 import logging
 from typing import Dict, List
+import os
+import json
+import csv
 
 # Importaciones desde la raíz del proyecto
 from scrapers.google_scraper import GoogleScraper
@@ -10,23 +13,25 @@ from scrapers.social_media_scraper import SocialMediaScraper
 from scrapers.discussions_scraper import DiscussionsScraper
 from pipelines.data_pipeline import DataPipeline
 from scrapers.blog_scraper import BlogScraper
+from utils.initialize_nltk import initialize_nltk
 
 def setup_logging():
+    """Configure logging"""
     logging.basicConfig(
-        level=logging.DEBUG,
+        level=logging.DEBUG,  # Cambiado a DEBUG para más detalle
         format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
         handlers=[
             logging.FileHandler('logs/main.log'),
-            logging.StreamHandler()
+            logging.StreamHandler()  # Esto mostrará logs en consola
         ]
     )
     return logging.getLogger(__name__)
 
-def parse_arguments():
+def parse_args():
     parser = argparse.ArgumentParser(description='Google Search Scraper')
-    parser.add_argument('keyword', help='Keyword to search for')
-    parser.add_argument('date', help='Date to search (MM/DD/YYYY)')
-    parser.add_argument('--config', default='config/config.yaml', help='Path to config file')
+    parser.add_argument('--keyword', default='tech blogging tips', help='Search keyword')
+    parser.add_argument('--date', default=datetime.now().strftime('%m/%d/%Y'), help='Search date (MM/DD/YYYY)')
+    parser.add_argument('--config', type=str, help='Path to config file', default='config/config.yaml')
     return parser.parse_args()
 
 def extract_detailed_content(results: List[Dict]) -> List[Dict]:
@@ -63,33 +68,46 @@ def extract_detailed_content(results: List[Dict]) -> List[Dict]:
     return detailed_results
 
 def main():
-    # Setup
-    args = parse_arguments()
     logger = setup_logging()
+    logger.info("Starting Google Search Scraper...")
     
     try:
-        # Initialize scrapers and pipeline
-        google_scraper = GoogleScraper(args.config)
-        data_pipeline = DataPipeline(args.config)
+        # Initialize NLTK
+        initialize_nltk()
         
-        # Perform Google search
-        logger.info(f"Searching for '{args.keyword}' on {args.date}")
-        search_results = google_scraper.search(args.keyword, args.date)
+        # Get arguments
+        args = parse_args()
+        logger.info(f"Search parameters: keyword='{args.keyword}', date='{args.date}'")
         
-        if not search_results:
-            logger.warning("No search results found")
+        # Initialize and perform search
+        scraper = GoogleScraper(config_path=args.config)
+        results = scraper.search(args.keyword, args.date)
+        
+        if not results:
+            logger.warning("No results found")
             return
             
-        # Extract detailed content
-        logger.info("Extracting detailed content from search results")
-        detailed_results = extract_detailed_content(search_results)
+        # Save results
+        output_dir = "data/processed"
+        os.makedirs(output_dir, exist_ok=True)
+        filename = f"{args.keyword.replace(' ', '_')}_{args.date.replace('/', '-')}"
         
-        # Process and save results
-        output_file = data_pipeline.process_results(detailed_results, args.keyword, args.date)
-        logger.info(f"Results saved to {output_file}")
+        # Save as JSON and CSV
+        json_path = os.path.join(output_dir, f"{filename}.json")
+        csv_path = os.path.join(output_dir, f"{filename}.csv")
+        
+        with open(json_path, 'w', encoding='utf-8') as f:
+            json.dump(results, f, indent=2, ensure_ascii=False)
+        with open(csv_path, 'w', newline='', encoding='utf-8') as f:
+            writer = csv.DictWriter(f, fieldnames=['title', 'url', 'snippet', 'platform', 'sentiment', 'sentiment_score'])
+            writer.writeheader()
+            for result in results:
+                writer.writerow(result)
+                
+        logger.info(f"Saved {len(results)} results to {output_dir}")
         
     except Exception as e:
-        logger.error(f"An error occurred: {e}")
+        logger.error(f"Error during execution: {str(e)}", exc_info=True)
         raise
 
 if __name__ == "__main__":
