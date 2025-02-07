@@ -75,8 +75,66 @@ src/
     ├── sentiment_analyzer.py # TextBlob sentiment analysis
     └── initialize_nltk.py  # NLTK initialization
 
+<<<<<<< HEAD
 Logging
 -------
 - Logs are stored in logs/ directory
 - Debug information available in debug_response.html
 - Failed searches logged in debug_no_results.html
+=======
+Limitations and Known Issues
+--------------------------
+1. Rate Limiting:
+   - Google may block requests if too many are made too quickly
+   - Use proxy rotation for better results
+
+2. Platform Restrictions:
+   - Some social media platforms require API authentication
+   - Content behind login walls may not be accessible
+
+3. JavaScript:
+   - Some sites require JavaScript rendering
+   - Ensure Chrome/Chromium is properly installed
+
+Troubleshooting
+--------------
+1. If pip/python is not found:
+   - Make sure Python is properly installed and added to PATH
+   - Try using pip3/python3 instead of pip/python
+
+2. If you get permission errors:
+   - On Unix systems, you might need to use sudo
+   - Or better, use: pip install --user -r requirements.txt
+
+3. If you get SSL errors:
+   - Try updating certificates:
+     pip install --upgrade certifi
+
+4. Virtual environment issues:
+   - If venv creation fails, try:
+     python3 -m pip install --user virtualenv
+     python3 -m virtualenv venv
+
+5. If you encounter Google blocks:
+   - Increase request_delay in config.yaml
+   - Enable proxy rotation
+   - Verify your IP isn't blacklisted
+
+6. For memory issues:
+   - Reduce max_pages in config
+   - Use CSV output for large datasets
+
+Security Considerations
+---------------------
+1. API Keys:
+   - Never commit API keys to version control
+   - Use environment variables for sensitive data
+
+2. Proxy Usage:
+   - Verify proxy reliability and security
+   - Rotate proxies regularly
+
+3. Rate Limiting:
+   - Respect website robots.txt
+   - Implement appropriate delays
+>>>>>>> b6edd6af1ac29fba30970ccdf2b2fe7a1ac025b1
